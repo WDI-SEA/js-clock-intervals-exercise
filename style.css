@@ -1,14 +1,26 @@
-#clock {
+body {
+	background: linear-gradient(to bottom right, #FF5733, #FF6ECA);
+	background-attachment: fixed;
 }
 
-#clock img {
+#clock {
+	position: relative;
+}
+
+#clock img{
+	position: absolute;
+	left: 50%;
+	margin-left: -25%;
 }
 
 #hour {
+	z-index: 100;
 }
 
 #minute {
+	z-index: 200;
 }
 
 #second {
+	z-index: 300;
 }
