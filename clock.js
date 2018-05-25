@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var minuteHand = document.getElementById('minute'); // rotate 6deg / 60000ms
     var hourHand = document.getElementById('hour');     // rotate 30deg / 3600000ms
     
-    // counter to link up clock movement minute rotates 6deg when counter%60 === 0, hour 6deg counter%720 === 0
+    // counter to link up clock movement -- minute rotates 6deg when counter%60 === 0, hour 6deg counter%720 === 0
     var clockPosition = 0;
     
     // check and set condition to reset after 11:59:59;
@@ -40,13 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
     //     startingTimes.push(rotationOfHourHand(timeAtLoad.getHours()));
     //     startingTimes.push(rotationOfMinuteHand(timeAtLoad.getMinutes()));
     //     startingTimes.push(rotationOfSecondHand(timeAtLoad.getSeconds()));
-
     //     var sum = startingTimes.reduce(function(acc,time) {
     //         return acc + time;
     //     } )
-
     //     return sum;
-
     // }
     
     // clockPosition = getStartingPosition();
@@ -59,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         secondHand.style.transform = 'rotate(' + secondDegrees + 'deg)';
         if (clockPosition%720 === 0){
-            console.log(hourDegrees);
             hourHand.style.transform = 'rotate(' + hourDegrees + 'deg)';
             minuteHand.style.transform = 'rotate(' + minuteDegrees + 'deg)'; // to avoid losing a minute every hour---I think?
         } else if (clockPosition%60 === 0){
@@ -73,3 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     resetCheck();
 
 });
+
+//To do:
+// figure out math & set starting position
+// refactor transform of hands into function that can accept h,m,s & deg as params
