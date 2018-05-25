@@ -1,9 +1,5 @@
-//second hand should rotate 6 degrees every 1 second
-//minute hand should rotate 6 degrees every 60 seconds
-//hour hand should rotate 6 degrees every 3600 seconds
 
-
-var secondHand = setTimeout(timerS, 1000);
+var secondHand = setInterval(timerS, 1000);
 
 function timerS() {
   document.getElementById("second").style.transform = "rotate(6deg)";

@@ -8,16 +8,14 @@
 
 #hour {
 	position: absolute;
-	transform: rotate(6deg);
 }
 
 #minute {
 	position: absolute;
-	transform: rotate(6deg);
+
 }
 
 #second {
 	position: absolute;
-	transform: rotate(6deg);
 }
 
