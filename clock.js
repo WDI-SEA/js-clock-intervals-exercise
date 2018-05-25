@@ -22,36 +22,27 @@ document.addEventListener('DOMContentLoaded', function () {
         return (second / 60 * 360);
     }    
     var rotationOfMinuteHand = function(minute) {
-        return (minute / 60 );
+        return (minute / 60 * 6);
     }    
     var rotationOfHourHand = function(hour) {
-        return (hour / 12);
+        return (hour / 120);
     }    
     
-    // var rotate = function(degrees) {
-    //     secondHand.style.transform = 'rotate('+ degrees + 'deg)';        
-    //     rotationCounter++;
-    // }
-    
-    // var degreesToRotate = function(){
-    //     rotationOfSecondHand(rotationCounter);
-    // }
-
-    // setInterval(function(){
-    //     rotate(degreesToRotate);
-    // }, 1000);
 
     var rotate = function(){
         var secondDegrees = rotationOfSecondHand(rotationCounter);
         var minuteDegrees = rotationOfMinuteHand(rotationCounter);
-    
+        var hourDegrees = rotationOfHourHand(rotationCounter);
+
         secondHand.style.transform = 'rotate(' + secondDegrees + 'deg)';
-        if (rotationCounter%60 === 0){
-            console.log(secondDegrees)
-            minuteHand.style.transform = 'rotate(' + secondDegrees + 'deg)';
+        if (rotationCounter%720 === 0){
+            console.log(hourDegrees);
+            hourHand.style.transform = 'rotate(' + hourDegrees + 'deg)';
+        } else if (rotationCounter%60 === 0){
+            minuteHand.style.transform = 'rotate(' + minuteDegrees + 'deg)';
         }
         rotationCounter++;        
     }
 
-    setInterval(rotate, 100);
+    setInterval(rotate, 1000);
 });
