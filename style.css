@@ -1,16 +1,10 @@
-body {
-	background: linear-gradient(to bottom right, #FF5733, #FF6ECA);
-	background-attachment: fixed;
-}
-
 #clock {
 	position: relative;
 }
 
 #clock img{
 	position: absolute;
-	left: 50%;
-	margin-left: -25%;
+	left: 25%;
 }
 
 #hour {
