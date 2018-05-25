@@ -1,14 +1,36 @@
+body {
+
+}
+
+div {
+
+}
+
 #clock {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 #clock img {
+  position: absolute;
 }
 
 #hour {
+  transform: rotate(0deg);
 }
 
 #minute {
+  transform: rotate(0deg);
 }
 
 #second {
+  transform: rotate(0deg);
+}
+
+#face {
+
 }
