@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
         clockPosition++;        
     }
 
-    setInterval(rotate, 1);
+    setInterval(rotate, 1000);
 
     resetCheck();
 
