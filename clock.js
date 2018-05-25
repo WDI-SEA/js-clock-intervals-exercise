@@ -7,7 +7,7 @@ var handRotation = function() {
   // create object that stores second, minute, and hour
   handPositions = {
     second: (today.getSeconds() / 60) * 360,
-    minute: (6 * (today.getMinutes() + (today.getSeconds() / 60))), //(today.getMinutes() / 60) * 360,
+    minute: 6 * (today.getMinutes() + (today.getSeconds() / 60)),
     hour: (60 * today.getHours() + today.getMinutes()) * 0.5
   };
   return handPositions;
