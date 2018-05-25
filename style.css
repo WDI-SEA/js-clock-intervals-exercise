@@ -1,14 +1,5 @@
-#clock {
-}
-
 #clock img {
-}
-
-#hour {
-}
-
-#minute {
-}
-
-#second {
-}
+	position: absolute;
+	left: 30%;
+	top: 10%;
+};
