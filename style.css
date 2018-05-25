@@ -1,14 +1,34 @@
+
+/*  styling all of the parts of the clock*/
 #clock {
+  position: absolute;
+
 }
 
+/* styling the clock images */
 #clock img {
+  position: absolute;
 }
 
+
+/* styling the hour image */
 #hour {
+  position: absolute;
 }
 
+
+/* styling the minute image*/
 #minute {
+  position: absolute;
 }
 
+
+
+
+
+/* styling the second image */
 #second {
+  position: absolute;
+  transform: rotate(0deg);
+
 }
