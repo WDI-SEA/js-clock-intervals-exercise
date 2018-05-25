@@ -7,17 +7,20 @@ document.addEventListener('DOMContentLoaded', function () {
     var hourHand = document.getElementById('hour');     // rotate 30deg / 3600000ms
     
     // counter to link up clock movement minute rotates 6deg when counter%60 === 0, hour 6deg counter%720 === 0
-    var rotationCounter = 0;
+    var clockPosition = 0;
+    
+    // check and set condition to reset after 11:59:59;
+    var resetCheck = function(){
+        if ( clockPosition === 43200 ) {
+            clockPosition = 0;
+        } 
+    }
+
+    // grab time for starting position
     var timeAtLoad = new Date();
     console.log(timeAtLoad);
     
-    //function to set starting position
-    // var getStartingPosition = function() {
-    //     var startingHour = timeAtLoad.getHours();
-    //     var startingMinute = timeAtLoad.getMinutes();
-    //     var startingSecond = timeAtLoad.getSeconds();
-    // }
-    
+    // functions to determine degree of rotation for each hand
     var rotationOfSecondHand = function(second) {
         return (second / 60 * 360);
     }    
@@ -27,22 +30,46 @@ document.addEventListener('DOMContentLoaded', function () {
     var rotationOfHourHand = function(hour) {
         return (hour / 120);
     }    
+
+    //function to set starting position
+    // var getStartingPosition = function() {
+    //     startingTimes = [];
+    //     // var startingHour = timeAtLoad.getHours();
+    //     // var startingMinute = timeAtLoad.getMinutes();
+    //     // var startingSecond = timeAtLoad.getSeconds();
+    //     startingTimes.push(rotationOfHourHand(timeAtLoad.getHours()));
+    //     startingTimes.push(rotationOfMinuteHand(timeAtLoad.getMinutes()));
+    //     startingTimes.push(rotationOfSecondHand(timeAtLoad.getSeconds()));
+
+    //     var sum = startingTimes.reduce(function(acc,time) {
+    //         return acc + time;
+    //     } )
+
+    //     return sum;
+
+    // }
+    
+    // clockPosition = getStartingPosition();
     
 
     var rotate = function(){
-        var secondDegrees = rotationOfSecondHand(rotationCounter);
-        var minuteDegrees = rotationOfMinuteHand(rotationCounter);
-        var hourDegrees = rotationOfHourHand(rotationCounter);
+        var secondDegrees = rotationOfSecondHand(clockPosition);
+        var minuteDegrees = rotationOfMinuteHand(clockPosition);
+        var hourDegrees = rotationOfHourHand(clockPosition);
 
         secondHand.style.transform = 'rotate(' + secondDegrees + 'deg)';
-        if (rotationCounter%720 === 0){
+        if (clockPosition%720 === 0){
             console.log(hourDegrees);
             hourHand.style.transform = 'rotate(' + hourDegrees + 'deg)';
-        } else if (rotationCounter%60 === 0){
+            minuteHand.style.transform = 'rotate(' + minuteDegrees + 'deg)'; // to avoid losing a minute every hour---I think?
+        } else if (clockPosition%60 === 0){
             minuteHand.style.transform = 'rotate(' + minuteDegrees + 'deg)';
         }
-        rotationCounter++;        
+        clockPosition++;        
     }
 
-    setInterval(rotate, 1000);
+    setInterval(rotate, 1);
+
+    resetCheck();
+
 });
