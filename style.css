@@ -1,11 +1,3 @@
-body {
-
-}
-
-div {
-
-}
-
 #clock {
   display: inline-block;
   position: relative;
@@ -29,8 +21,4 @@ div {
 
 #second {
   transform: rotate(0deg);
-}
-
-#face {
-
 }

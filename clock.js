@@ -1,7 +1,13 @@
+// Degrees of rotation for each hand on the clock
 var degrees = 6;
 var minDegrees = degrees / 60;
 var hourDegrees = degrees / (60 * 60);
+
+// Start clock at current time
 var currentTime = new Date(Date.now());
+
+
+// Rotate the hands on the clock
 var count = currentTime.getSeconds() + (currentTime.getMinutes() * 60) + (currentTime.getHours() * 3600);
 
 var rotation = function() {
@@ -14,4 +20,5 @@ var rotation = function() {
   hourHand.style.transform = "rotate(" + hourDegrees * count + "deg)";
 }
 
+// Rotate the hands at a set interval
 var timer = setInterval(rotation, 1000);
