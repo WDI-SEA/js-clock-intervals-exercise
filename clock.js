@@ -17,7 +17,7 @@ var interval = setInterval(function(){
 	time = Date.now();
 	seconds = (time / 1000) % 60;
 	minutes = (time / 60000) % 60;
-	hour = (time / 720000) % 60;
+	hour = (time / 720000) % 60 + 1;
 
 	rotate(secondRotation(seconds), secondRotation(minutes), hourRotation(hour));
 }, 1000);
