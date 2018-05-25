@@ -1,14 +1,25 @@
-#clock {
-}
-
-#clock img {
+#clockface {
+  position:fixed;
+  top: 10%;
+  left: 10%;
 }
 
 #hour {
+  position:fixed;
+  top: 10%;
+  left: 10%;
+  transform: rotate(10deg);
 }
 
 #minute {
+  position:fixed;
+  top: 10%;
+  left: 10%;
+  transform: rotate(0deg);
 }
 
 #second {
+  position:fixed;
+  top: 10%;
+  left: 10%;
 }
