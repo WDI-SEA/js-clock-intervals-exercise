@@ -1,3 +1,7 @@
+//if js is in html head
+//document.addEventListener document loaded
+
+
 // Degrees of rotation for each hand on the clock
 var degrees = 6;
 var minDegrees = degrees / 60;
@@ -8,7 +12,7 @@ var currentTime = new Date(Date.now());
 
 
 // Rotate the hands on the clock
-var count = currentTime.getSeconds() + (currentTime.getMinutes() * 60) + (currentTime.getHours() * 3600);
+var count = currentTime.getSeconds() + (currentTime.getMinutes() * 60) + (currentTime.getHours() * (12 * 3600));
 
 var rotation = function() {
   count ++;
