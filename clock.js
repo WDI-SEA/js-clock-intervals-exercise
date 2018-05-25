@@ -1,5 +1,5 @@
 //if js is in html head
-//document.addEventListener document loaded
+// document.addEventListener("DOMContentLoaded")
 
 
 // Degrees of rotation for each hand on the clock
@@ -23,6 +23,6 @@ var rotation = function() {
   var hourHand = document.getElementById("hour");
   hourHand.style.transform = "rotate(" + hourDegrees * count + "deg)";
 }
-
+rotation();
 // Rotate the hands at a set interval
 var timer = setInterval(rotation, 1000);
