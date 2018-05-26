@@ -19,3 +19,11 @@ function timerM() {
     minutePosition += 6; 
 }
 
+var hourPosition = 6;
+
+var hourHand = setInterval(timerH, 360000);
+
+function timerH() {
+	document.getElementById("hour").style.transform = "rotate("+ hourPosition + "deg)";
+    hourPosition += 6; 
+}
