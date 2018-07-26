@@ -1,0 +1,27 @@
+#face {
+  position: relative;
+  left: 25%;
+}
+#clock {
+}
+
+#clock img {
+}
+
+#hour {
+  position: absolute;
+  left: 25%;
+  z-index: 1;
+}
+
+#minute {
+  position: absolute;
+  left: 25%;
+  z-index: 10;
+}
+
+#second {
+  position: absolute;
+  left: 25%;
+  z-index: 100;
+}
