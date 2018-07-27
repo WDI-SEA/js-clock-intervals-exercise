@@ -1,14 +1,43 @@
-#clock {
+html, body, .container {
+	height: 100%;
 }
 
-#clock img {
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-#hour {
+.clock {
+	position: relative;
+	width: 600px;
+	height: 600px;
+
 }
 
-#minute {
+.hands {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-#second {
+.clock img {
+}
+
+.hour {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.minute {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.second {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
