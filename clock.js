@@ -4,32 +4,32 @@ var secondHand = document.getElementById("second");
 var minuteHand = document.getElementById("minute");
 var hourHand = document.getElementById("hour");
 
-var sTick = 6;
-var mTick = 6;
-var hTick = 6;
+var sTick = 1/6;
+var mTick = 1/6;
+var hTick = 1/36;
 
 
 function secTick(){
     secondHand.style.transform = "rotate(" + sTick + "deg)";
-    sTick = sTick + 6;      
+    sTick = sTick + 1/6;      
 };
 
 
-setInterval(secTick, 1000)
+setInterval(secTick, 1000/36);
 
 function minTick(){
     minuteHand.style.transform = "rotate(" + mTick + "deg)";
-    mTick = mTick + 6;      
+    mTick = mTick + 1/6;      
 };
 
 
-setInterval(minTick, 60000)
+setInterval(minTick, 10000/6);
 
 function hourTick(){
     hourHand.style.transform = "rotate(" + hTick + "deg)";
-    hTick = hTick + 6;      
+    hTick = hTick + 1/36;      
 };
 
 
-setInterval(hourTick, 3600000)
+setInterval(hourTick, 600000/36);
 
