@@ -1,14 +1,32 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #clock {
+    position: relative;
+    width: 600px;
+    
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
+    
 }
 
 #minute {
+    
 }
 
 #second {
+    
+}
+
+
+* {
+    border: 1px red solid;
 }
