@@ -1,14 +1,22 @@
 #clock {
+    margin: 0 auto;
+    text-align: center;
 }
 
 #clock img {
+    display: inline-block;
+    margin: 0 auto;
+    position: absolute;
 }
 
 #hour {
+
 }
 
 #minute {
+
 }
 
 #second {
+
 }
