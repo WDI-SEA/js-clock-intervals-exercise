@@ -15,10 +15,12 @@ function setTime() {
   let secDegree = (seconds / 60) * 360;
   secondHand.style.transform = `rotate(${secDegree}deg)`;
 
-  let minDegree = (minutes / 60) * 360;
+  let minDegree = ((minutes + seconds / 60) * 360) / 60;
   minuteHand.style.transform = `rotate(${minDegree}deg)`;
 
-  let hrDegree = (hours / 12) * 360;
+  let hrDegree = ((hours + minutes / 60) * 360) / 12;
+  // console.log(hours + minutes / 60);
+  // console.log(hrDegree);
   hourHand.style.transform = `rotate(${hrDegree}deg)`;
 }
 
