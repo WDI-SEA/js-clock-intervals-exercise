@@ -1,14 +1,21 @@
 #clock {
+text-align: center;
+width: 600px;
+background-color: white;
+position: relative;
 }
 
 #clock img {
+    position: absolute;
 }
 
-#hour {
+#hour #minute #second {
+    position: relative;
+    transform: rotate(0deg);
 }
-
-#minute {
+/* Don't need the below selectors */
+/* #minute {
 }
 
 #second {
-}
+} */
