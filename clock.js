@@ -1,16 +1,18 @@
-console.log("testing, testing, testing!")
+// Stack PNGs of clock face, hour hand, minute hand, and second hand
+// Create JS DOM functions to update the clock's hands from browser time
 
-//variables for each hand
+// DOM Variable for each hand
 var hour = document.getElementById("hour");
 var minute = document.getElementById("minute");
 var second = document.getElementById("second");
 
-var sec = 0;
-var min = 0;
-var hr = 0;
+// CLOCK CODE WITHOUT CURRENT TIME
 
+// Variables set to ) for seconds, minutes & hours
 
-// Clock functions without current time
+// var sec = 0;
+// var min = 0;
+// var hr = 0;
 
 // var el = document.getElementById("myElements");
 // el.style.transform = "rotate(" + degrees + "deg)";
@@ -33,7 +35,7 @@ var hr = 0;
 //     } else {
 //         min = 0;
 //     }
-//     console.log("tick", min);
+//     console.log("tock", min);
 //     //transform
 //     minute.style.transform = ("rotate(" + min / 60 * 360 + "deg)")
 // }, 60000)
@@ -49,26 +51,27 @@ var hr = 0;
 //     hr.style.transform = ("rotate(" + hr / 12 * 360 + "deg)")
 // }, 3600000)
 
-// Clock with current time
+// Bonus, make it work with Current Time
+// CLOCK CODE WITH CURRENT TIME
 
-//make the below locally scoped
+// REFACTOR: make the below locally scoped
+// ADD: move hour hand 0.5deg per minute
 
-// var interval = clearInterval();
 var timer = new Date();
 var currentSec = timer.getSeconds();
 var currentMin = timer.getMinutes();
 var currentHr = timer.getHours();
 
-var fullClockTick = setInterval(function(){
+var fullClockTick = setInterval(function () {
     // var interval = clearInterval ();
     timer = new Date();
     currentSec = timer.getSeconds();
     currentMin = timer.getMinutes();
     currentHr = timer.getHours();
     ticker();
-},1000);
+}, 1000);
 
-var secMinToDegrees = function(secOrMin) {
+var secMinToDegrees = function (secOrMin) {
     var secOrMinDegrees = (secOrMin / 60) * 360;
     return secOrMinDegrees;
 }
@@ -81,14 +84,11 @@ var hrsToDegrees = function (hrs) {
 }
 
 var ticker = function () {
-    second.style.transform = ("rotate(" + secMinToDegrees(currentSec) + "deg)" );
-    minute.style.transform = ("rotate(" + secMinToDegrees(currentMin) + "deg)" );
-    hour.style.transform = ("rotate(" + hrsToDegrees(currentHr) + "deg)" );
+    second.style.transform = ("rotate(" + secMinToDegrees(currentSec) + "deg)");
+    minute.style.transform = ("rotate(" + secMinToDegrees(currentMin) + "deg)");
+    hour.style.transform = ("rotate(" + hrsToDegrees(currentHr) + "deg)");
 }
 
-// stack pngs of clock face, hour hand, minute hand, and second hand
-// create JS DOM functions to update the clock's hands from browser time
-// set up three DOM selectors for hour, minute, and second
 
 //Hour hand formulas
 // def clockangles(hour, minute):

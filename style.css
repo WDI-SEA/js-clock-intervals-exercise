@@ -1,7 +1,9 @@
+body {
+    background-attachment: fixed;
+}
 #clock {
 text-align: center;
 width: 600px;
-background-color: white;
 position: relative;
 }
 
