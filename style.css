@@ -1,37 +1,30 @@
 body {
-    padding: 0;
-    margin: 0;
-    background-image: url("http://livingroomideas.eu/wp-content/uploads/2017/05/Best-Clocks-to-D%C3%A9cor-Your-Living-Room2.0.jpg");
-    background-size: cover;
-    display: inline-block;
-}
-#room {
-
-}
-#face {
-    image-rendering: crisp-edges;
-}
-#clock img {
-    height: 80vh;
-    vertical-align: 100vh;
-    position: absolute;
-    transition: all 1s linear;
-    image-rendering: crisp-edges;
-   
+  margin: 0 auto;
+  padding: 0;
+  background-image: url("http://livingroomideas.eu/wp-content/uploads/2017/05/Best-Clocks-to-D%C3%A9cor-Your-Living-Room2.0.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
 }
 
-#clock {
-    margin: 11.1rem 0 0 13.7rem;
-    text-align: center;
-    width: 600px;
-    position: relative;
-    transform: scale(.312);
-    filter: blur(1px);
-    filter: contrast(75%);
-    filter: drop-shadow(5px 0 0 15px, rgb(196, 195, 195));
-    filter: brightness(80%);
+#clock  {
+  width: 85%;
+  transition: transform 2s ease;
+  transition: all 0.05s; 
+  
 }
-
-#hour #minute #second {
-    position: relative;
+img {
+  position: fixed;
+  top: 26vh;
+  width: 20rem;
+  image-rendering: optimizeQuality;
+  
+}
+#hour #minute #second #clock .hand {
+  position: relative;
+  transition: all 0.05s; 
+  transition: all 1s linear;
+}
+.hand {
+  transition: all 0.05s; 
 }
