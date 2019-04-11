@@ -15,7 +15,6 @@ window.requestAnimFrame = (function(){
 // Clock time variables are stored in an array for simpler syntax
 // Main clock logic - note hours calculation adjusts hour hand for accurate movement
 
-}
 function clock() {
   var date = new Date();
   var time = [date.getSeconds(), date.getMinutes(), date.getHours()];
