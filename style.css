@@ -14,6 +14,7 @@ body{
     
 }
 #clock img {
+   
     position: absolute;
     left:500px;
     top: 200px;
@@ -41,3 +42,66 @@ body{
 .contaier{
     margin: 0 auto;
 }
+@media only screen and (max-width: 1500px) {
+    #clock img {
+        width:50%;
+        position: absolute;
+        left:300px;
+        top: 200px;
+    }
+    
+    #hour {
+        position: absolute;
+        left:300px;
+        top: 200px;
+        
+    }
+    
+    #minute {
+        position: absolute;
+        left:300px;
+        top: 200px;
+    
+    }
+    
+    #second {
+        position: absolute;
+        left:300px;
+        top: 200px;
+    }
+    .contaier{
+        margin: 0 auto;
+    }
+  }
+@media only screen and (max-width: 1000px) {
+    #clock img {
+        width:70%;
+        position: absolute;
+        left:100px;
+        top: 200px;
+    }
+    
+    #hour {
+        position: absolute;
+        left:100px;
+        top: 200px;
+        
+    }
+    
+    #minute {
+        position: absolute;
+        left:100px;
+        top: 200px;
+    
+    }
+    
+    #second {
+        position: absolute;
+        left:100px;
+        top: 200px;
+    }
+    .contaier{
+        margin: 0 auto;
+    }
+  }
+  
