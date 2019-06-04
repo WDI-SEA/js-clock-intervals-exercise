@@ -1,14 +1,32 @@
 #clock {
+
 }
 
 #clock img {
+position: absolute;
 }
 
 #hour {
+position: relative;
 }
 
 #minute {
+position: relative;
 }
 
 #second {
+position: relative;
+}
+
+#span {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    position: absolute;
+    border: 2px solid white;
+    color: white;
+    background-color:black;
+    display: inline-block;
+    margin: 350px 50px 50px 240px;
+    padding: 0px;
 }
