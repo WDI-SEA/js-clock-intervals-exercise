@@ -1,14 +1,43 @@
-#clock {
+body{
+    width: 100%;
+    background-image: url('https://wallpapercave.com/wp/doAHAI6.jpg');
+   
 }
-
+#clock {
+    margin: 0 auto;
+}
+#face{
+    background-color: rgba(17, 15, 128, 0.925);
+    border-radius: 50%;
+    box-shadow: -10px -20px #0e0341bd;
+    
+    
+}
 #clock img {
+    position: absolute;
+    left:500px;
+    top: 200px;
 }
 
 #hour {
+    position: absolute;
+    left:500px;
+    top: 200px;
+    
 }
 
 #minute {
+    position: absolute;
+    left:500px;
+    top: 200px;
+
 }
 
 #second {
+    position: absolute;
+    left:500px;
+    top: 200px;
+}
+.contaier{
+    margin: 0 auto;
 }
