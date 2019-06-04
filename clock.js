@@ -8,11 +8,14 @@ var hourCounter;
 var secondsCurrent;
 var minutesCurrent;
 var hoursCurrent;
+// var clockSpeed = 1000;
 
 // HTML Element references
 var secondHand = document.getElementById('second');
 var minuteHand = document.getElementById('minute');
 var hourHand = document.getElementById('hour');
+// var enableCalibration = document.getElementById('cal');
+// var enableHighSpeed = document.getElementById('hispd');
 
 // Functions
 var initialize = function(){
@@ -75,6 +78,13 @@ var moveHourHand = function(){
     hourHandPosition += 6/60/12;
     hourHand.style.transform = "rotate("+ hourHandPosition + "deg)";
 }
+
+// if (enableHighSpeed.checked){
+//     clockSpeed = 10;
+// }
+// else {
+//     clockSpeed = 1000;
+// };
 
 initialize();
 setInterval(masterClockTiming,1000);
