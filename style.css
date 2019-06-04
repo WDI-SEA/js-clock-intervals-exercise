@@ -1,7 +1,20 @@
+/*  {
+    border: black solid 1px;
+} */
+header {
+    width: 63%;
+    margin: 0 auto;
+    text-align: center;
+}
 #clock {
+    width: 63%;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #clock img {
+    position: absolute;
+    left: 27%;
 }
 
 #hour {
