@@ -2,6 +2,7 @@
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
@@ -11,4 +12,6 @@
 }
 
 #second {
+    
+
 }
