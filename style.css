@@ -1,14 +1,24 @@
 #clock {
+    position: absolute;
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
+    position: relative;
+    transform: rotate(0deg);
 }
 
 #minute {
+    position: relative;
+    transform: rotate(0deg);
+
 }
 
 #second {
+    position: relative;
+    transform: rotate(0deg);
+
 }
