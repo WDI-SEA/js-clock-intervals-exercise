@@ -1,9 +1,3 @@
-// Update the hour hand every 12000 ms. Rotate 6 degrees clockwise.
-// Update the minute hand every 60000 ms. Rotate 6 degrees clockwise.
-// Update the second hand every 1000 ms. Rotate the 
-
-
-
 // Variables
 var secondHandPosition;
 var minuteHandPosition;
@@ -11,6 +5,9 @@ var hourHandPosition;
 var secondCounter;
 var minuteCounter;
 var hourCounter;
+var secondsCurrent;
+var minutesCurrent;
+var hoursCurrent;
 
 // HTML Element references
 var secondHand = document.getElementById('second');
@@ -19,17 +16,35 @@ var hourHand = document.getElementById('hour');
 
 // Functions
 var initialize = function(){
-    secondHandPosition = 0;
-    minuteHandPosition = 0;
-    hourHandPosition = 0;
+    calibrateTime();
     secondCounter = 0;
     minuteCounter = 0;
     hourCounter = 0;
 }
 
+var calibrateTime = function(){
+    currentTime = new Date();
+    secondsCurrent = currentTime.getSeconds();
+    minutesCurrent = currentTime.getMinutes();
+    hoursCurrent = currentTime.getHours();
+    //console.log(currentTime)
+    // Convert from 24hr to 12hr
+    if (hoursCurrent > 12){
+        hoursCurrent -= 12;
+    }
+    else if (hoursCurrent === 0) {
+        hoursCurrent = 12;
+    }   
+    // else hoursCurrent = hoursCurrent
+    secondHandPosition = (secondsCurrent / 60) * 360;
+    minuteHandPosition = (minutesCurrent / 60) * 360;
+    hourHandPosition = (hoursCurrent / 12) * 360;
+}
+
 var masterClockTiming = function(){
     if (secondCounter === 60){
         secondCounter = 0;
+        calibrateTime();
     };
     if (minuteCounter === (60*60)){
         minuteCounter = 0;
@@ -62,4 +77,6 @@ var moveHourHand = function(){
 }
 
 initialize();
-setInterval(masterClockTiming,10);
+setInterval(masterClockTiming,1000);
+
+
