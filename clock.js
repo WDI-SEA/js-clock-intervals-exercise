@@ -32,7 +32,7 @@ var hourRotation = function() {
     var hourDegrees = (hours/12) * 360;
     hourEl.style.transform = "rotate(" + hourDegrees + "deg)";  
     hours++;
-    if (hours >= 60) {
+    if (hours >= 12) {
         hours = 0;
     }
 }
