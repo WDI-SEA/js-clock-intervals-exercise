@@ -37,9 +37,9 @@ var hourRotation = function() {
     }
 }
 
-setInterval(secondRotation, 200); // No need for the parentheses after the secondRotation function since setInterval takes in a function
-setInterval(minuteRotation, 500);
-setInterval(hourRotation, 1000);
+setInterval(secondRotation, 1000); // No need for the parentheses after the secondRotation function since setInterval takes in a function
+setInterval(minuteRotation, 60000);
+setInterval(hourRotation, 3600000);
 
 
 // var intervalHandle = setInterval( function () {
