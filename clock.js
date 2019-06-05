@@ -11,7 +11,7 @@ var minHand = document.getElementById('minute');
 var date = new Date();
 var hour = date.getHours();
 var min = date.getMinutes();
-var sec = date.getSeconds();
+var sec = date.getSeconds()+1;
 
 
 //convert sec to degree 
