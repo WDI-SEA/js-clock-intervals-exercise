@@ -1,14 +1,19 @@
-var now = new Date();
-var nowHour = now.getHours();
-var hour = document.getElementById("hour");
-var minute = document.getElementById("minute");
-var second = document.getElementById("second");
-var hourDegrees = 0;
-var minuteDegrees = 0;
-var secondDegrees = 0;
+//Constants
 const hourRotation = 360 / 12 / 60 / 60;
 const minuteRotation = 360 / 60 / 60;
 const secondRotation = 360 / 60;
+//Variables
+var now = new Date();
+var nowHour = now.getHours();
+var nowMinutes = now.getMinutes();
+var nowSeconds = now.getSeconds();
+var hour = document.getElementById("hour");
+var minute = document.getElementById("minute");
+var second = document.getElementById("second");
+var hourDegrees = (nowHour * 30) + (nowMinutes * .5) + (nowSeconds * hourRotation);
+var minuteDegrees = (nowMinutes * 6) + (nowSeconds * minuteRotation);
+var secondDegrees = (nowSeconds * secondRotation);
+
 //hour = 0.00833333333 degree movement per second
 function hourTransform(){
     hourDegrees = hourDegrees + hourRotation;
