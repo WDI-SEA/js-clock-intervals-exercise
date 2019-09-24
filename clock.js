@@ -19,7 +19,7 @@ function hourTransform(){
     hourDegrees = hourDegrees + hourRotation;
     hour.style.transform = "rotate(" + hourDegrees + "deg)";
 }
-//minute = .5 degrees per second
+//minute = .1 degrees per second
 function minuteTransform(){
     minuteDegrees = minuteDegrees + minuteRotation;
     minute.style.transform = "rotate(" + minuteDegrees + "deg)";
