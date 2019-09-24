@@ -1,14 +1,11 @@
 #clock {
+  display: block;
+  position: relative;
+  width: 600px;
+  margin: auto;
 }
 
-#clock img {
-}
-
-#hour {
-}
-
-#minute {
-}
-
-#second {
+#face, #hour, #minute, #second {
+  position: absolute;
+  margin: auto;
 }
