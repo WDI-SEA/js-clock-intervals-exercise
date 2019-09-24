@@ -2,13 +2,19 @@
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
+    position: absolute; /*removed from flow of document */
 }
 
 #minute {
+    position: absolute;
 }
 
 #second {
+    position: absolute;
+    /* transform: rotate(90deg); */
 }
+
