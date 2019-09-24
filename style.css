@@ -1,14 +1,33 @@
+body{
+    position: relative;
+}
+
 #clock {
+position: absolute;
+left: 30vw;
 }
 
 #clock img {
+
 }
 
 #hour {
+    z-index: -1;
+    position: absolute;
+    left: 0vw;
+    top: 0vh;
 }
 
 #minute {
+    z-index: -.5;
+    position: absolute;
+    left: 0vw;
+    top: 0vh;
 }
 
 #second {
+    position: absolute;
+    z-index: 1;
+    left: 0vw;
+    top: 0vh;
 }
