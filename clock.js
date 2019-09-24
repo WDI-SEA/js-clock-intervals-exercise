@@ -8,25 +8,15 @@ const hourHand = document.getElementById("hour"),
     minute = new Date().getMinutes(),
     second = new Date().getSeconds(),
     // Convert current hour to deg
-    hourDeg = ((1 / 12) * 360),
-    minuteDeg = ((1 / 60) * 360),
-    secondDeg = ((1 / 60) * 360);
-
-  console.log(hour);
-  console.log(minute);
-  console.log(second);
+    hourDeg = hour * 30,
+    minuteDeg = minute * 6,
+    secondDeg = second * 6;
 
 setInterval (function() {
   hourHand.style.transform = "rotate(" + hourDeg + "deg)";
-  hourDeg = hourDeg + 6;
-}, 3600000);
-
-setInterval (function() {
+  hourDeg = hourDeg + 0.0083333333;
   minuteHand.style.transform = "rotate(" + minuteDeg + "deg)";
-  minuteDeg = minuteDeg + 6;
-}, 60000);
-
-setInterval (function() {
+  minuteDeg = minuteDeg + 0.1;
   secondHand.style.transform = "rotate(" + secondDeg + "deg)";
   secondDeg = secondDeg + 6;
 }, 1000);
