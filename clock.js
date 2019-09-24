@@ -25,5 +25,5 @@ let hourMove = function() {
     hour.style.transform = "rotate(" + Hourdegrees + "deg)"; 
 }
 
-setInterval(hourMove, 360000);
+setInterval(hourMove, 3600000);
 
