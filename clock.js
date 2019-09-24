@@ -21,9 +21,9 @@ let minutesMove = function() {
 setInterval(minutesMove, 60000);
 
 let hourMove = function() {
-    let Hourdegrees = (5/60) * 360 * h++;
+    let Hourdegrees = (1/60) * 360 * h++;
     hour.style.transform = "rotate(" + Hourdegrees + "deg)"; 
 }
 
-setInterval(hourMove, 3600000);
+setInterval(hourMove, 720000);
 
