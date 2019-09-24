@@ -8,8 +8,8 @@ const hourHand = document.getElementById("hour"),
     minute = new Date().getMinutes(),
     second = new Date().getSeconds(),
     // Convert current hour to deg
-    hourDeg = hour * 30,
-    minuteDeg = minute * 6,
+    hourDeg = hour * 30 + (minute / 2) + (second * 0.0083333333),
+    minuteDeg = minute * 6 + (second * 0.1),
     secondDeg = second * 6;
 
 setInterval (function() {
