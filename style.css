@@ -1,15 +1,18 @@
 #clock {
     text-align: center;
+    display: inline;
 }
 
 #clock img {
-    position: fixed;
+    position: absolute;
+    
 }
 
 #hour {
     
     position: relative;
     z-index: 1;
+   
     
 }
 
