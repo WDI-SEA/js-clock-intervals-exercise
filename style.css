@@ -1,14 +1,35 @@
+body {
+    text-align: center;
+}
+.digital {
+    font-size:5rem;
+    padding: 20px;
+}
+.analog {
+    right: 300px;
+}
 #clock {
+    position: relative;
+    margin: 0 auto;
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
+    position: relative;
 }
 
 #minute {
+    position: relative;
 }
 
 #second {
+    position: relative;
 }
+
+#myElement {
+    transform: rotate(45deg);
+}
+
