@@ -1,14 +1,33 @@
 #clock {
+    position: absolute;
+    
+}
+
+#face {
+    z-index: 10;
 }
 
 #clock img {
+    position: absolute;
+    z-index: 10;
 }
 
 #hour {
+   position: absolute;
+   transform-origin: 50% 100%;
+   animation: rotate 43200s infinite linear;
 }
 
 #minute {
+   position: absolute;
+    transform-origin: 50% 100%;
+    animation: rotate 3600s infinite linear;
 }
 
 #second {
+    position: absolute;
+    z-index: 10;
+    transform-origin: 50% 80%;
+    animation: rotate 60s infinite linear;
 }
+
