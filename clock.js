@@ -1,8 +1,9 @@
 // let seconds = 1
 // let minute = 0
 // let hour = 0
- let degreeSecond = 6
-
+let degreeSecond = 6
+let degreeMinute = 6
+let degreeHour = 30
 
 // const secondHand = (seconds) => {
 //     // 360 degrees in our clock
@@ -18,21 +19,27 @@ const secondHand = () => {
 }
 setInterval(secondHand, 1000)
 
-const minuteHand = (minute) => {
+const minuteHand = () => {
     //360 degrees in our clock
     // 60 second in a minute
-    let degRotation = 60 * minute
+    let minute = document.getElementById('minute')
+    minute.style.transform = 'rotate('+ degreeMinute + "deg)"
+    degreeMinute += 6
 }
+setInterval(minuteHand, 60000)
 
-const hourHand = (hour) => {
+const hourHand = () => {
     //360 degrees in our clock
     // 60 minutes in a hour
-    let degRotation = 60 * hour
+    let hour = document.getElementById('hour')
+    hour.style.transform = 'rotate('+ degreeHour + "deg)"
+    degreeHour += 30
 }
+setInterval(hourHand, 3600000)
 
-const tick = () => {
-    seconds++
-}
+// const tick = () => {
+//     seconds++
+// }
 
 
 document.addEventListener('DOMContentLoaded', function (){
