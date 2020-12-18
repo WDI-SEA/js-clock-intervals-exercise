@@ -1,14 +1,26 @@
 #clock {
+    margin: auto 0;
+    
 }
 
-#clock img {
+#face {
+    position: fixed;
+
 }
 
-#hour {
+
+
+#second {
+    position: fixed;
+    transform:rotate(0 deg);
 }
 
 #minute {
+    position: fixed;
+    transform: rotate(0 deg);
 }
+#hour {
+    position: fixed;
+    transform:rotate(0 deg);
 
-#second {
 }
