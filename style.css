@@ -1,14 +1,25 @@
 #clock {
+  display: grid;
+  justify-content: center;
 }
 
-#clock img {
-}
-
-#hour {
-}
-
-#minute {
+#face {
+  grid-column: 1;
+  grid-row: 1;
 }
 
 #second {
+  grid-column: 1;
+  grid-row: 1;
+  transform: rotate(0.1deg);
+}
+#minute {
+  grid-column: 1;
+  grid-row: 1;
+  transform: rotate(6deg);
+}
+#hour {
+ grid-column: 1;
+ grid-row: 1;
+ transform: rotate(30deg);
 }
