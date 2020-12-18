@@ -2,13 +2,18 @@
 }
 
 #clock img {
+    position: absolute;
+    
 }
 
 #hour {
+    
 }
 
 #minute {
+    
 }
 
 #second {
+    
 }
