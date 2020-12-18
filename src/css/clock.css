@@ -1,0 +1,22 @@
+[data-selector='clock'] .u_image_container.v_face{
+  outline: 2px solid red;
+  width: 500px;
+}
+
+
+
+.clock {
+  align-items: center;
+}
+
+.frame {
+  /* outline: 2px solid cyan; */
+}
+
+.face {
+  /* outline: 2px solid magenta; */
+}
+
+.second {
+  /* outline: 2px solid orange; */
+}
