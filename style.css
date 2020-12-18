@@ -1,14 +1,20 @@
 #clock {
+ width: 50%;
+ margin: 0 auto;
 }
 
 #clock img {
+    position:absolute;
 }
 
 #hour {
+    position: absolute;
 }
 
 #minute {
+    position:absolute;
 }
 
 #second {
+    position:absolute;
 }
