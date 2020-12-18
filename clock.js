@@ -30,8 +30,6 @@ function tick() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    const passageOfTime = setInterval(tick, 1000);
-    console.log('DOM has loaded');
-    // passageOfTime; // This calls the constant/the function that starts the timer. 
+    const passageOfTime = setInterval(tick, 1000); // Because setInterval has parentheses, this line causes it to start counting.
 })
 
