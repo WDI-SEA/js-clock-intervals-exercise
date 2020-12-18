@@ -9,16 +9,16 @@
 }
 
 #hour {
-    transform: rotate(45deg);
+    transform: rotate(360deg);
     z-index: 1;
 }
 
 #minute {
-    transform: rotate(45deg);
+    transform: rotate(360deg);
     z-index: 2;
 }
 
 #second {
-    transform: rotate(45deg);
+    transform: rotate(360deg);
     z-index: 3;
 }
