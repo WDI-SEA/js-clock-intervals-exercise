@@ -1,9 +1,21 @@
+body {
+    background-image: url("/home/jj/Desktop/general_assembly/unit_one/homeworks/js-clock-intervals-exercise/img/tumblr_mxg2jzN7yO1swjbz7o1_250.gif");
+    background-position: center;
+}
 #clock {
+    
 }
 
 #clock img {
+   
+    top: 0;
+    left: 0;
+    position: absolute;
 }
+#id {
 
+
+}
 #hour {
 }
 
@@ -11,4 +23,7 @@
 }
 
 #second {
+    transform: rotate(0deg);
+ 
+
 }
