@@ -1,14 +1,38 @@
-#clock {
+body {
+    background:
 }
 
-#clock img {
+#face{
+  grid-area: overlap;
+  align-self: center;
+  justify-self: center;
+    
 }
-
 #hour {
+    grid-area: overlap;
+    align-self: center;
+    justify-self: center;
+    transform: rotate(90deg)
 }
-
 #minute {
+    grid-area: overlap;
+    align-self: center;
+    justify-self: center;
+    transform: rotate(45deg)
+    
+      
 }
 
 #second {
+    grid-area: overlap;
+    align-self: center;
+    justify-self: center;
+    transform: rotate(60deg)
+}
+#clockContainer {
+    display: grid;
+    margin: 250px auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlap";
 }
