@@ -1,9 +1,4 @@
-// Helper function that rotates the second hand
-// Keep count of how many seconds there are. Reset once it hits 60 seconds,
-// hold seconds, minutes, hours
-let secs = 0;
-let minutes = 0;
-let hours = 0;
+secs = 0;
 
 function tickSecondHand(seconds) {
     let secondDegreeRotation = 360/60 * seconds; // 360 degrees in a circle, 60 seconds in a rotation.
