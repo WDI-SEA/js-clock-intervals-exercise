@@ -61,4 +61,5 @@ hourRotation(5); // returns (5 / 12) * 360
 
 //Bonus: show actual time
 var d = new Date();
-document.getElementById(date).innerHTML = d
+document.getElementById(date).innerHTML = d;
+console.log(Date)

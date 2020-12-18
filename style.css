@@ -1,6 +1,6 @@
 #clock {
     width: 100%
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -28,7 +28,9 @@
 
 p {
     width: 100%
-    margin: 100px;
+    margin: 10000px 100px 100px 100px;
     padding: 100px;
     color: black;
+    position: absolute;
+    font-size: 50px;
 }
