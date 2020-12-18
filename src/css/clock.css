@@ -1,22 +1,36 @@
-[data-selector='clock'] .u_image_container.v_face{
-  outline: 2px solid red;
-  width: 500px;
-}
+[data-selector='clock'] [data-selector='bottom'] {}
 
-
-
-.clock {
+[data-selector='clock'] [data-selector='top'] {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.frame {
-  /* outline: 2px solid cyan; */
+[data-selector='clock'] [data-selector='top'] .im_frame {}
+
+[data-selector='clock'] .im_frame.v_face {
+  width: 500px;
 }
 
-.face {
-  /* outline: 2px solid magenta; */
+[data-selector='clock'] .im_frame.v_second {
+  width: 500px;
+  position: relative;
+  z-index: 5;
+  outline: 5px solid rgba(0, 0, 0, .2);
 }
 
-.second {
-  /* outline: 2px solid orange; */
+[data-selector='clock'] .im_frame.v_minute {
+  position: absolute;
+  outline: 5px solid rgba(255, 0, 0, .5);
+}
+
+[data-selector='clock'] .im_frame.v_hour {
+  position: absolute;
+  outline: 5px solid rgba(0, 255, 255, .5);
+}
+
+[data-selector='clock'] .clock {
+  align-items: center;
 }

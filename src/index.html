@@ -15,18 +15,40 @@
   <body>
     <article data-selector="clock" class="lay_flex_center clock">
       <section class="lay_fullscreen lay_flex_center lay_dead_center">
-        <div class="u_image_container v_face">
-          <img
-            data-selector="face"
-            class="face u_image"
-            src="img/clockface.png"
-          />
-        </div>
+        <section data-selector="bottom">
+          <div class="im_frame v_face">
+            <img
+              data-selector="face"
+              class="face im_image"
+              src="img/clockface.png"
+            />
+          </div>
+        </section>
 
-        <!-- <img data-selector="second" class="second" src="img/second-hand.png" /> -->
-        <!-- 
-      <img data-selector="minute" src="img/minute-hand.png" />
-      <img data-selector="hour" src="img/hour-hand.png" /> -->
+        <section data-selector="top">
+          <div class="im_frame v_second">
+            <img
+              data-selector="second"
+              class="second im_image"
+              src="img/second-hand.png"
+            />
+          </div>
+          <div class="im_frame v_minute">
+            <img
+              data-selector="minute"
+              class="im_image"
+              src="img/minute-hand.png"
+            />
+          </div>
+
+          <div class="im_frame v_hour">
+            <img
+              data-selector="hour"
+              class="im_image"
+              src="img/hour-hand.png"
+            />
+          </div>
+        </section>
       </section>
     </article>
   </body>
