@@ -18,17 +18,17 @@
   width: 500px;
   position: relative;
   z-index: 5;
-  outline: 5px solid rgba(0, 0, 0, .2);
+  outline: 5px solid rgba(0, 0, 0, 1);
 }
 
 [data-selector='clock'] .im_frame.v_minute {
   position: absolute;
-  outline: 5px solid rgba(255, 0, 0, .5);
+  outline: 5px solid rgba(255, 0, 0, 1);
 }
 
 [data-selector='clock'] .im_frame.v_hour {
   position: absolute;
-  outline: 5px solid rgba(0, 255, 255, .5);
+  outline: 5px solid rgba(0, 255, 255, 1);
 }
 
 [data-selector='clock'] .clock {
