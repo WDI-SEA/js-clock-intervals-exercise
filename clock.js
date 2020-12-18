@@ -24,8 +24,18 @@ function turnHour(){
     el.style.transform = "rotate(" + hourDegrees + "deg)";
 }
 
+function getDate(){
+    var d = new Date();
+    document.getElementById("Time").innerHTML = d.toLocaleTimeString();
+}
+var now= new Date();
+function newDate(){
+    document.getElementById("Date").innerHTML = now.getMonth()+"/"+now.getDate()+"/"+now.getFullYear();
+}
+
+
 var secTime=setInterval(turnSecond,1000);
-
+var myVar = setInterval(getDate, 1000);
 var minTime=setInterval(turnMinute,60000);
-
+var newDat=setInterval(newDate,1000);
 var hourTime=setInterval(turnHour,3600000);
