@@ -4,11 +4,26 @@
 #clock img {
 }
 
-#hour {
+#clock #hour {
+   position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+    transform: rotate(let(--hours));
 }
 
-#minute {
+#clock #minute {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    transform: rotate(let(--minutes));
 }
 
-#second {
+#clock #second {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    transform: rotate(let(--seconds));
 }
