@@ -18,7 +18,7 @@ setInterval(minuteRotation, 60000);
 
 const hourRotation = () => {
   let hour = document.getElementById('hour');
-  minute.style.stransform = 'rotate('+hourDegree+ 'deg)';
+  hour.style.transform = 'rotate('+hourDegree+ 'deg)';
   hourDegree +=6;
-  
 }
+setInterval(hourRotation, 3600000);
