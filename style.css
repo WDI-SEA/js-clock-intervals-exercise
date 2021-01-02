@@ -1,14 +1,23 @@
-#clock {
+html {
+    background:#4d76ff;
 }
 
-#clock img {
+.clock {
+    width: 60rem;
+    margin: 40px auto;
 }
 
-#hour {
+.clock-face {
+    position: relative;
+    
 }
 
-#minute {
-}
+.hand {
+    height: 700px;
+    position: absolute;
+    top: -7.9%;
+    right: 32%;
+   
+   
+    
 
-#second {
-}
