@@ -1,4 +1,4 @@
-# JavaScript Clock Intervals
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) JavaScript Clock Intervals
 
 Create a webpage that displays a clock where the
 second, minute, and hour hands tick.
@@ -26,9 +26,9 @@ to them through the DOM and setting a new value to
 their CSS properties:
 
 ```js
-var degrees = 45;
+let degrees = 45;
 
-var el = document.getElementById("myElement");
+let el = document.getElementById("myElement");
 el.style.transform = "rotate(" + degrees + "deg)";
 ```
 
@@ -48,8 +48,8 @@ hourRotation(5); // returns (5 / 12) * 360
 Use JavaScripts `Date` objects to display the actual
 time.
 
-```
-var now = new Date();
+```js
+let now = new Date();
 ```
 
 Get `now` by declaring a new Date object. You can google for "MDN date methods" to see what
