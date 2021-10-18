@@ -16,7 +16,18 @@ const secondHand = document.getElementById('second')
 const secondConversion = (s) => {
     return (s/60) * 360
 }
+let secondPosition = 0
+let minutePosition = 0
 
-const moveHour = () => {
-    
+const moveSecondHand = () => { 
+    secondHand.style.transform = "rotate("+secondPosition+"deg)"
+    secondPosition += 6
 }
+
+const moveMinuteHand = () => {
+    minuteHand.style.transform = "rotate("+minutePosition+"deg)"
+    minutePosition += 3
+}
+
+const secondTick = setInterval(moveSecondHand, 1000)
+const minuteTick = setInterval(moveMinuteHand, 30000)

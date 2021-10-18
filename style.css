@@ -22,5 +22,4 @@ body {
 #second {
     position: absolute;
     z-index: 5;
-    transform: rotate(90deg);
 }
