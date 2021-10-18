@@ -13,24 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(() => {
     if(sElapsed>=59){
       sElapsed = 0
-      if(mElapsed>=59){
-        mElapsed = 0
-        if(hElapsed>=11){
-          hElapsed = 0
-        } else {
-          hElapsed++
-        }
-      } else {
-        mElapsed++
-      }
     } else {
       sElapsed++
     }
     sAngle = sElapsed/60*360
     sHand.style.transform = "rotate("+sAngle+"deg)"
-    mAngle = mElapsed/60*360
+
+    if(mElapsed>=3599){
+      mElapsed = 0
+    } else {
+      mElapsed++
+    }
+    mAngle = mElapsed/3600*360
     mHand.style.transform = "rotate("+mAngle+"deg)"
-    hAngle = hElapsed/12*360
+
+    if(hElapsed>=43199){
+      hElapsed = 0
+    } else {
+      hElapsed++
+    }
+    hAngle = hElapsed/43200*360
     hHand.style.transform = "rotate("+hAngle+"deg)"
   }, 1000)
 
