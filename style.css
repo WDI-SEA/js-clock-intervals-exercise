@@ -1,14 +1,24 @@
+/*
+Write CSS to have the clock face, second, minute, hour hands 
+all display correctly on top of each other. Make sure the
+red second hand displays on top of the minute and hour hand.
+(Try changing the order the div elements are written in the HTML)
+*/
+
 #clock {
+    height: 600px;
+    width: 600px;
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    grid-template-rows: repeat (4, 1fr);
 }
 
-#clock img {
+#face {
+    grid-column: 1/5;
+    grid-row: 1/5;
 }
 
-#hour {
-}
-
-#minute {
-}
-
-#second {
+#hour, #minute, #second {
+    grid-column: 3;
+    grid-row: 3;
 }
