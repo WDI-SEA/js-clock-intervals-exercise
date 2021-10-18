@@ -1,7 +1,10 @@
 #clock {
+    
 }
 
 #clock img {
+    text-align: center;
+    position: absolute;
 }
 
 #hour {
@@ -11,4 +14,5 @@
 }
 
 #second {
+    z-index: 1;
 }
