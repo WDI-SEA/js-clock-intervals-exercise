@@ -2,7 +2,7 @@ const second = document.getElementById("second");
 const minute = document.getElementById("minute");
 const hour = document.getElementById("hour)");
 
-function secRotation() {
+const secRotation = () => {
     let now = new Date();
     let seconds = now.getSeconds();
     second.style.transform = 'rotate(' + (seconds/60*360) + 'deg)';
