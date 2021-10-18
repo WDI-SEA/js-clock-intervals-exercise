@@ -1,41 +1,26 @@
-const secondHand = document.getElementById("#second")
-const minuteHand = document.getElementById("#minute")
-const hourHand = document.getElementById("#hour")
+const secondHand = document.getElementById("second")
+const minuteHand = document.getElementById("minute")
+const hourHand = document.getElementById("hour")
 
-const convertSecondRotation = () => {
-    setInterval(moveSecondHand, 1000)
-    let seconds = 0 
-    for (i = 0; i < 60; i++){
-        seconds = (i/60) * 360
-    }
-    console.log(seconds)
-}
-const convertMinuteRotation = () => {
-    setInterval(moveMinuteHand, 60000)
-    let minutes = 0 
-    for (i = 0; i < 60; i++) {
-        minutes = (i/60) * 360
-    }
-    console.log(minutes)
-}
-const convertHourRotation = () => {
-    setInterval(moveHourHand, 3600000)
-    let hours = 0 
-    for (i = 0; i < 12; i++){
-        hours =    (i/12) * 360
-    }
-    console.log(hours)
-}
+let secondDegrees = 0
+let minuteDegrees = 0
+let hourDegrees = 0
 
 const moveSecondHand = () => {
-    convertSecondRotation()
-    secondHand.style.transform = "rotate(" + seconds + "deg)"
+    secondDegrees += 6
+    console.log(secondDegrees)
+    secondHand.style.transform = `rotate(${secondDegrees}deg)`
 }
 const moveMinuteHand = () => {
-    convertMinuteRotation()
-    minuteHand.style.transform = "rotate(" + minutes + "deg)"
+    minuteDegrees += 6
+    console.log(minuteDegrees)
+    minuteHand.style.transform = `rotate(${minuteDegrees}deg)`
 }
 const moveHourHand = () => {
-    convertHourRotation()
-    hourHand.style.transform = "rotate(" + hours + "deg)"
+    hourDegrees =+ 30
+    console.log(hourDegrees)
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`
 }
+setInterval(moveSecondHand, 1000)
+setInterval(moveMinuteHand, 60000)
+setInterval(moveHourHand, 3600000)
