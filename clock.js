@@ -3,9 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const sHand = document.getElementById('second')
   const mHand = document.getElementById('minute')
   const hHand = document.getElementById('hour')
-  let sElapsed = 0
-  let mElapsed = 0
-  let hElapsed = 0
+  let now = new Date();
+  let sElapsed = now.getSeconds()
+  let mElapsed = now.getMinutes()*60+sElapsed
+  let hElapsed = now.getHours()%12*3600+mElapsed
   let sAngle = 0
   let mAngle = 0
   let hAngle = 0
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       mElapsed++
     }
+  
     mAngle = mElapsed/3600*360
     mHand.style.transform = "rotate("+mAngle+"deg)"
 
@@ -36,5 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
     hHand.style.transform = "rotate("+hAngle+"deg)"
   }, 1000)
 
+  setTimeout(() => {
+    const clock = document.getElementById('clock')
+    clock.style.display = 'initial'
+  }, 1000)
+
 })
-  
