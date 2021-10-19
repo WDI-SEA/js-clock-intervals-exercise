@@ -30,16 +30,11 @@ const moveMinuteHand = () => {
     minutePosition += 3
 }
 
-const moveMinuteHand = () => {
-    minuteHand.style.transform = "rotate("+minutePosition+"deg)"
-    minutePosition += 3
-}
-
-const moveMinuteHand = () => {
-    hourHand.style.transform = "rotate("+minutePosition+"deg)"
-    minutePosition += 3
+const moveHourHand = () => {
+    hourHand.style.transform = "rotate("+hourPosition+"deg)"
+    hourPosition += 3
 }
 
 const secondTick = setInterval(moveSecondHand, 1000)
 const minuteTick = setInterval(moveMinuteHand, 30000)
-const hourTick = setInterval(moveMinuteHand, 360000)
+const hourTick = setInterval(moveHourHand, 360000)
