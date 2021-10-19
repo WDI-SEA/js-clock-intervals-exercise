@@ -1,14 +1,22 @@
+
 #clock {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
 }
 
-#clock img {
+#face{
+   position:absolute;
 }
 
 #hour {
+    position:absolute;
 }
 
 #minute {
+    position:absolute;
 }
 
 #second {
+    position:absolute;
 }
