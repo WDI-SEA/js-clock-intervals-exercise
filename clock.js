@@ -31,6 +31,10 @@ const hourToDegree = (hour, minute, second) => {
     secondRotation(second)
 }
 
-//TEST
-hourToDegree(3, 4, 6)
+//RUN
+let now = new Date();
+hour = now.getHours()
+minute = now.getMinutes()
+second = now.getSeconds()
 
+hourToDegree(hour, minute, second)
