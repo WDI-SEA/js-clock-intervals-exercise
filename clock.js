@@ -19,7 +19,7 @@ let secondCount = 0
             return secondCount
         } else {
             console.log(`secondCount = ${secondCount}`)
-            secondCount++
+            secondCount = secondCount + .5
             return secondCount
         }
     }    
@@ -47,7 +47,7 @@ const secondConverter = () => {
 
 //write a function that runs the needed functions every second
 const secondSetter = ( (fireOnSecond) => {
-    setInterval(fireOnSecond, 2000)
+    setInterval(fireOnSecond, 1000)
     console.log("seconds set!")
 })
 
@@ -67,7 +67,7 @@ let minuteCount = 0
             return minuteCount
         } else {
             console.log(`minuteCount = ${minuteCount}`)
-            minuteCount++
+            minuteCount= minuteCount + .5
             return minuteCount
     }    
  }
@@ -95,7 +95,7 @@ const minuteConverter = () => {
 
 //write a function that runs the needed functions every second
 const minuteSetter = ( (fireOnMinute) => {
-    setInterval(fireOnMinute, 120000)
+    setInterval(fireOnMinute, 60000)
     console.log("minutes set!")
 })
 
@@ -116,7 +116,7 @@ let hourCount = 0
             return hourCount
         } else {
             console.log(`hourCount = ${hourCount}`)
-            hourCount++
+            hourCount = hourCount + .5
             return hourCount
     }    
  }
@@ -144,7 +144,7 @@ const hourConverter = () => {
 
 //write a function that runs the needed functions every second
 const hourSetter = ( (fireOnHour) => {
-    setInterval(fireOnHour, 7200000)
+    setInterval(fireOnHour, 3600000)
     console.log("hours set!")
 })
 
