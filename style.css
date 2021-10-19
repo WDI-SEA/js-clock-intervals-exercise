@@ -1,6 +1,5 @@
 #clock {
-    
-    
+    position: relative;
 }
 
 #clock img {
@@ -9,21 +8,23 @@
 
 #second {
     position: absolute;
-    left: 9.5px;
-    bottom: 100px;
+    left: 1px;
+    bottom: 10px;
 }
 
 #hour {
     position: absolute;
-    left: 8px;
-    bottom: 120px;
+    left: 1px;
+    bottom: 10px;
 }
 
 #minute {
     position: absolute;
-    left: 8px;
-    bottom: 120px;
+    left: 1px;
+    bottom: 10px;
 
 }
 
-
+#hour, #minute, #second {
+    /* transform: rotate(90deg); */
+}
