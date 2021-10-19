@@ -2,13 +2,28 @@
 }
 
 #clock img {
+    position: absolute;
+    z-index: 0;
+}
+
+#face {
 }
 
 #hour {
+    position: relative;
+    right: 990px;
+    z-index: 1;
 }
 
 #minute {
+    position: relative;
+    right: 990px;
+    z-index: 2;
+
 }
 
 #second {
+    position: relative;
+    right: 990px;
+    z-index: 3;
 }
