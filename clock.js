@@ -4,6 +4,7 @@ let hourDegree = 0
 let minuteDegree = 0
 let secondDegree = 0
 
+
 //DECLARE BASIC FUNCTIONS
 
 //time to degree conversion for seconds
@@ -37,10 +38,47 @@ const hourToDegree = (hour, minute, second) => {
     secondRotation(second)
 }
 
-//RUN
-let now = new Date();
-hour = now.getHours()
-minute = now.getMinutes()
-second = now.getSeconds()
+const secondClock = () => {
+    secondRotation()
+    //console.log("1 second")
+}
 
-hourToDegree(hour, minute, second)
+const minuteClock = () => {
+    minuteRotation()
+    //console.log("1 minute")
+}
+
+const hourClock = () => {
+    hourRotation()
+    //console.log("1 hour")
+}
+
+const changeTime = () => {
+    let now = new Date();
+    hour = now.getHours()
+    minute = now.getMinutes()
+    second = now.getSeconds()
+    hourToDegree(hour, minute, second)
+    console.log(second)
+}
+
+// const refreshTime = () => {
+
+// }
+
+//RUN
+
+// let now = new Date();
+// hour = now.getHours()
+// minute = now.getMinutes()
+// second = now.getSeconds()
+
+changeTime()
+
+//hourToDegree(hour, minute, second)
+const time = setInterval(changeTime, 1000)
+const secondTick = setInterval(secondClock, 1000)
+const minuteTick = setInterval(minuteClock, 60000)
+const hourTick = setInterval(hourClock, 360000)
+
+
