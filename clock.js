@@ -9,18 +9,24 @@ let secondDegree = 0
 //time to degree conversion for seconds
 const secondRotation = (second) => {
     let secondDegree = (second/60) * 360
-    console.log(secondDegree)
+    let el = document.getElementById("second");
+    el.style.transform = "rotate(" + secondDegree + "deg)";
+    //console.log(secondDegree)
 }
 //time to degree conversion for minutes
 //angle movement = same as seconds. interval time will differ
 const minuteRotation = (minute) => {
     let minuteDegree = (minute/60) * 360
-    console.log(minuteDegree)
+    let el = document.getElementById("minute");
+    el.style.transform = "rotate(" + minuteDegree + "deg)";
+    //console.log(minuteDegree)
 }
 //time to degree converion for hours
 const hourRotation = (hour) => {
     let hourDegree = (hour/12) * 360
-    console.log(hourDegree)
+    let el = document.getElementById("hour");
+    el.style.transform = "rotate(" + hourDegree + "deg)";
+    //console.log(hourDegree)
 }
 //DECLARE HIGHER ORDER FUNCTION
 
