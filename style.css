@@ -1,14 +1,25 @@
+/* Write CSS to have the clock face, second,
+minute, hour hands all display correctly on top of each other */
 #clock {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  display: block;
 }
 
 #clock img {
+    text-align: center;
+    position: absolute;
 }
 
-#hour {
-}
+/* #hour {
+    z-index: 7;
+} 
 
 #minute {
+    z-index: 8;
 }
 
 #second {
-}
+    z-index: 9;
+} */
