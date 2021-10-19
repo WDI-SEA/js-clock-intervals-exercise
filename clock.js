@@ -99,19 +99,40 @@ const nowTime = () => {
         nowSecond = now.getSeconds()
         nowMinute = now.getMinutes()
         nowHour = now.getHours()
-        console.log(`Hour: ${nowHour} Minute ${nowMinute} Second ${nowSecond}`)
+        // console.log(`Hour: ${nowHour} Minute ${nowMinute} Second ${nowSecond}`)
 
         }, 1000)
     
     // determine Hours
     // every 12 minutes, update hourAngle
     let hourInterval = setInterval(() => {
-            console.log(nowHour) 
-            let hourCounterToAngle = ((nowHour/24) % 12) * 360 // 330
-            console.log(hourCounterToAngle)
-            let hourAngle = (hourCounterToAngle + .1) % 360;
-            console.log(hourAngle)
-            hourHand.style.transform = "rotate(" + hourAngle + "deg)";
+            // let currentHour = nowHour % 12
+            if (nowHour == 0) {
+                nowHour = 12;
+                console.log(nowHour) 
+                let hourCounterToAngle = ((nowHour))/12 * 360 // 330
+                console.log(hourCounterToAngle)
+                let hourAngle = (hourCounterToAngle + .1)  * 360
+                // nowHour++
+                console.log(hourAngle)
+                hourHand.style.transform = "rotate("+hourAngle+"deg)"
+            } else if (nowHour <= 12) {
+                console.log(nowHour)
+                let hourCounterToAngle = ((nowHour) % 12)/12 * 360 // 330
+                console.log(hourCounterToAngle)
+                let hourAngle = (hourCounterToAngle+ .1)  * 360
+
+                // nowHour++
+                console.log(hourAngle)
+                hourHand.style.transform = "rotate("+hourAngle+"deg)"
+            }
+
+
+
+
+
+
+
         }, 1000)
     // determine Minutes
     let minuteInterval = setInterval(() => {
@@ -140,15 +161,20 @@ const nowTime = () => {
 }
 
 
+document.addEventListener('DOMContentLoaded', () => {
+
 // If internals are in the global scope
 // then you can refer to them inside this handler
 beginningButton.addEventListener('click', function() {
     // start them for the first time or... again
-    zeroTime(nowHour, nowMinute, nowSecond);
+    zeroTime();
     
 })
 
 
 currentButton.addEventListener('click', function() {
-    nowTime(nowHour, nowMinute, nowSecond)
+    nowTime()
+})
+
+
 })
