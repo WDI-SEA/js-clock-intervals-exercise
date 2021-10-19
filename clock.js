@@ -20,7 +20,7 @@ function tellTime() {
     minuteHand.style.transform = 'rotate(' + minuteDeg + 'deg)';
     secondHand.style.transform = 'rotate(' + secondDeg + 'deg)';
 
-   setTimeout(tellTime, 1000);
+   setInterval(tellTime, 1000);
 
 };
 
