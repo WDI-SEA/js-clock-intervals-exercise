@@ -1,3 +1,23 @@
+.img4 {
+    position: absolute;
+    z-index: 4;
+}
+
+.img3 {
+    position: absolute;
+    z-index: 3;
+}
+
+.img1 {
+    position: absolute;
+    z-index: 1;
+}
+
+.img2 {
+    position: absolute;
+    z-index: 2;
+}
+
 #clock {
 }
 
@@ -5,10 +25,13 @@
 }
 
 #hour {
+    /*transform: rotate(30deg); degrees needed to get to next hour*/
 }
 
 #minute {
+    /*transform: rotate(6deg); degrees needed to get to next minute*/
 }
 
 #second {
+    /*transform: rotate(6deg); degrees needed to get to next second*/
 }
