@@ -1,12 +1,10 @@
 //DECLARE VARIABLES
-
 let hourDegree = 0
 let minuteDegree = 0
 let secondDegree = 0
 
 
 //DECLARE BASIC FUNCTIONS
-
 //time to degree conversion for seconds
 const secondRotation = (second) => {
     let secondDegree = (second/60) * 360
@@ -29,30 +27,7 @@ const hourRotation = (hour) => {
     el.style.transform = "rotate(" + hourDegree + "deg)";
     //console.log(hourDegree)
 }
-//DECLARE HIGHER ORDER FUNCTION
-
-//pass secondRotation, minuteRotation, and hourRotation functions
-const hourToDegree = (hour, minute, second) => {
-    hourRotation(hour)
-    minuteRotation(minute)
-    secondRotation(second)
-}
-
-const secondClock = () => {
-    secondRotation()
-    //console.log("1 second")
-}
-
-const minuteClock = () => {
-    minuteRotation()
-    //console.log("1 minute")
-}
-
-const hourClock = () => {
-    hourRotation()
-    //console.log("1 hour")
-}
-
+//use current date to update hourToDegree function's parameters
 const changeTime = () => {
     let now = new Date();
     hour = now.getHours()
@@ -62,23 +37,25 @@ const changeTime = () => {
     console.log(second)
 }
 
-// const refreshTime = () => {
+//DECLARE HIGHER ORDER FUNCTION
+//pass hour, minute, and second parameters to secondRotation, minuteRotation, and hourRotation functions
+const hourToDegree = (hour, minute, second) => {
+    hourRotation(hour)
+    minuteRotation(minute)
+    secondRotation(second)
+}
 
-// }
 
 //RUN
 
-// let now = new Date();
-// hour = now.getHours()
-// minute = now.getMinutes()
-// second = now.getSeconds()
-
+//begin clock by running changeTime
 changeTime()
-
-//hourToDegree(hour, minute, second)
+//set interval for running changeTime function every second
 const time = setInterval(changeTime, 1000)
-const secondTick = setInterval(secondClock, 1000)
-const minuteTick = setInterval(minuteClock, 60000)
-const hourTick = setInterval(hourClock, 360000)
+
+//set intervals for running time-to-degree rotation functions
+const secondTick = setInterval(secondRotation, 1000)
+const minuteTick = setInterval(minuteRotation, 60000)
+const hourTick = setInterval(hourRotation, 360000)
 
 

@@ -1,6 +1,6 @@
 .img4 {
     position: absolute;
-    z-index: 4;
+    z-index: 4; /*highest z-index is the most front-facing div*/
 }
 
 .img3 {
@@ -10,7 +10,7 @@
 
 .img1 {
     position: absolute;
-    z-index: 1;
+    z-index: 1; /*lowest priority z-index for background image*/
 }
 
 .img2 {
@@ -25,13 +25,10 @@
 }
 
 #hour {
-    /*transform: rotate(30deg); degrees needed to get to next hour*/
 }
 
 #minute {
-    /*transform: rotate(6deg); degrees needed to get to next minute*/
 }
 
 #second {
-    /*transform: rotate(6deg); degrees needed to get to next second*/
 }
