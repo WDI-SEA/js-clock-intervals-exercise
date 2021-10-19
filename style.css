@@ -1,7 +1,15 @@
+body {
+    background: white;
+}
+
 #clock {
+    display: grid;
+    justify-items: center;
+    position: relative
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
