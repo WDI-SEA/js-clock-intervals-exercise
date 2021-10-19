@@ -1,32 +1,33 @@
 const second = document.getElementById("second");
 const minute = document.getElementById("minute");
 const hour = document.getElementById("hour");
-const now = new Date();
 
 // Setting recursive function for rotation seconds by grabbing current time and transforming the second hand to the correct degree
-const secRotation = () => {
+// uses Date + get... to pull in current time.  Uses those times to calculate the degree to transform the hands into the right position.
+ const secRotation = () => {
     let now = new Date();
     let seconds = now.getSeconds();
-    second.style.transform = 'rotate(' + (seconds/60*360) + 'deg)';
-    console.log("Seconds: ", seconds);
+    second.style.transform = 'rotate(' + (seconds / 60*360) + 'deg)';
+    //console.log("Seconds: ", seconds);
     setTimeout(secRotation, 1000);
   }
   secRotation();
-
+// Calculation to continuously update the minute hand added
   const minRotation = () => {
     let now = new Date();
     let minutes = now.getMinutes();
-    minute.style.transform = 'rotate(' + (minutes/60*360) + 'deg)';
-    console.log("Minutes: ", minutes);
+    let seconds = now.getSeconds();
+    minute.style.transform = 'rotate(' + (minutes + (seconds / 60)) / 60 * 360 + 'deg)';
     setTimeout(minRotation, 1000);
   }
   minRotation();
-
+// Calculation to continuously update the hour hand added
   const hourRotation = () => {
     let now = new Date();
     let hours = now.getHours();
-    hour.style.transform = 'rotate(' + (hours/12*360) + 'deg)';
-    console.log("Hours", hours);
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    hour.style.transform = 'rotate(' + (hours + (minutes / 60) + (seconds / 3600)) / 12 * 360 + 'deg)';
     setTimeout(hourRotation, 1000);
   }
   hourRotation();
