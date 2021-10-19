@@ -5,7 +5,7 @@ let hourDegrees = 0
 
 const secondHand = document.querySelector('#second')
 const minuteHand = document.querySelector('#minute')
-const hourHand = document.querySelector('#hourHand')
+const hourHand = document.querySelector('#hour')
 const clockFace = document.querySelector('#face')
 const nowButton = document.querySelector('#current-time')
 const beginningButton = document.querySelector('#regular-clock')
@@ -43,7 +43,7 @@ let hourCounter = 0
 let minuteCounter = 0
 let secondCounter = 0
 
-console.log(`heloo $(hourCounter)`)
+
 
 
 
@@ -93,62 +93,24 @@ const zeroTime = () => {
 }
 
 const nowTime = () => {
-    // Polling now method every second
+    // Refactor
     let updater = setInterval(() => {
-        now = new Date()
-        nowSecond = now.getSeconds()
-        nowMinute = now.getMinutes()
-        nowHour = now.getHours()
+        let now = new Date()
+        let nowSecond = now.getSeconds()
+        let nowMinute = now.getMinutes()
+        let nowHour = now.getHours()
+        let hourDeg = 30
+        let minuteDeg = 6
+        let secondDeg = 6
         // console.log(`Hour: ${nowHour} Minute ${nowMinute} Second ${nowSecond}`)
-
-        }, 1000)
-    
-    // determine Hours
-    // every 12 minutes, update hourAngle
-    let hourInterval = setInterval(() => {
-            // let currentHour = nowHour % 12
-            if (nowHour == 0) {
-                nowHour = 12;
-                console.log(nowHour) 
-                let hourCounterToAngle = ((nowHour))/12 * 360 // 330
-                console.log(hourCounterToAngle)
-                let hourAngle = (hourCounterToAngle + .1)  * 360
-                // nowHour++
-                console.log(hourAngle)
-                hourHand.style.transform = "rotate("+hourAngle+"deg)"
-            } else if (nowHour <= 12) {
-                console.log(nowHour)
-                let hourCounterToAngle = ((nowHour) % 12)/12 * 360 // 330
-                console.log(hourCounterToAngle)
-                let hourAngle = (hourCounterToAngle+ .1)  * 360
-
-                // nowHour++
-                console.log(hourAngle)
-                hourHand.style.transform = "rotate("+hourAngle+"deg)"
-            }
-
-
-
-
-
-
-
-        }, 1000)
-    // determine Minutes
-    let minuteInterval = setInterval(() => {
-            console.log(nowMinute)
-            let minuteCountertoAngle = (nowMinute/60) * 360
-            let minuteAngle = minuteCountertoAngle + 6 % 360;
-            minuteHand.style.transform ="rotate(" + minuteAngle + "deg)";
+        let hourAngle = (nowHour * hourDeg * nowMinute) // if hour is 1 and minute is 20 1*30+20/2 = 40deg
+        let minuteAngle = nowMinute * minuteDeg
+        let secondAngle = nowSecond * secondDeg
+        hourHand.style.transform = "rotate(" + hourAngle + "deg)";
+        minuteHand.style.transform ="rotate(" + minuteAngle + "deg)";
+        secondHand.style.transform = "rotate(" + secondAngle + "deg)";
         }, 1000)
 
-    let secondInterval = setInterval(() => {
-            console.log(nowSecond)
-            let secondCountertoAngle = (nowSecond/60) * 360
-            let secondAngle = (secondCountertoAngle + 6) % 360
-            secondHand.style.transform = "rotate(" + secondAngle + "deg)";
-        }, 1000)
-    
     const stopClock = () => {
         clearInterval(hourInterval)
         clearInterval(secondInterval)
@@ -157,7 +119,6 @@ const nowTime = () => {
     }
     
         stopButton.addEventListener('click', stopClock)
-    // determine Seconds
 }
 
 
