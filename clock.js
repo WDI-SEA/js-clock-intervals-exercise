@@ -29,7 +29,7 @@ const secondTick = setInterval(seconds, 1000)
 let mDegree = 0
 const minDegrees = () => {
     console.log(mDegree)
-    return mDegree += 1
+    return mDegree += 0.1
 }
 
 // check increments
@@ -41,9 +41,19 @@ const minutes = () => {
     minuteHand.style.transform = `rotate(${minDegrees()}deg)`
 }
 
-const minuteTick = setInterval(minutes, 10000)
+const minuteTick = setInterval(minutes, 1000)
 
-let hDegree = 0
+let hrDegree = 0
 const hrDegrees = () => {
     console.log(hrDegree)
+    return hrDegree += 0.0083
 }
+
+console.log(hrDegrees())
+console.log(hrDegrees())
+
+const hours = () => {
+    hourHand.style.transform = `rotate(${hrDegrees()}deg)`
+}
+
+const hourTick = setInterval(hours, 1000)
