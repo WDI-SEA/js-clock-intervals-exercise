@@ -103,7 +103,7 @@ const nowTime = () => {
         let minuteDeg = 6
         let secondDeg = 6
         // console.log(`Hour: ${nowHour} Minute ${nowMinute} Second ${nowSecond}`)
-        let hourAngle = (nowHour * hourDeg * nowMinute) // if hour is 1 and minute is 20 1*30+20/2 = 40deg
+        let hourAngle = ((nowHour * hourDeg) + nowMinute)/2 // if hour is 1 and minute is 20 1*30+20/2 = 40deg
         let minuteAngle = nowMinute * minuteDeg
         let secondAngle = nowSecond * secondDeg
         hourHand.style.transform = "rotate(" + hourAngle + "deg)";
