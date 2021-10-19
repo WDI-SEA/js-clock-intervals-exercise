@@ -1,23 +1,22 @@
-let degrees = 0;
-
 let hourHand = document.getElementById("hour");
-hourHand.style.transform = "rotate(" + degrees + "deg)";
-
 let minuteHand = document.getElementById("minute");
-minuteHand.style.transform = "rotate(" + degrees + "deg)";
-
 let secHand = document.getElementById("second");
-minuteHand.style.transform = "rotate(" + degrees + "deg)";
 
+const clockIsTiming = () => {
+        const currentTime = new Date();
 
-const hourHandRotation = (arg) => {
-    return (arg / 12 ) * 360
+        const seconds = currentTime.getSeconds()
+        // getting seconds from the new Date fucntion
+        const secondRotation = () => {
+            return ((seconds / 60) * 360);
+        } 
+        // calculating seconds of degrees that the second had would have to turn
+        const degreesOfSeconds = secondRotation()
+        secHand.style.transform = "rotate(" + degreesOfSeconds + "deg)";
+
+        
+        
 }
 
-const minuteHandRotation = (arg) => {
-    return (arg / 60) * 360
-}
-
-const secondHandRotation = (arg) => {
-    return (arg / 60) * 360
-}
+setInterval(clockIsTiming, 1000)
+clockIsTiming()

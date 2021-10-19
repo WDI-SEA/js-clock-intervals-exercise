@@ -13,12 +13,14 @@
     position: relative;
     right: 990px;
     z-index: 1;
+    transform: rotate(45deg);
 }
 
 #minute {
     position: relative;
     right: 990px;
     z-index: 2;
+    transform: rotate(45deg);
 
 }
 
@@ -26,4 +28,5 @@
     position: relative;
     right: 990px;
     z-index: 3;
+    transform: rotate(45deg);
 }
