@@ -4,12 +4,11 @@ const minuteHand = document.getElementById('minute')
 const secondHand = document.getElementById('second')
 
 // create intervals to make the clock tick.
-// second hand will run 
+// second hand will tick
 // will determine the new degree transformation
 let sDegree = 0
 const secDegrees = () => {
     console.log(sDegree)
-    // sDegree += 6
     return sDegree += 6
     }
 
@@ -24,3 +23,27 @@ const seconds = () => {
 }
 
 const secondTick = setInterval(seconds, 1000)
+
+//minute hand with tick
+// will determine the new degree transformation
+let mDegree = 0
+const minDegrees = () => {
+    console.log(mDegree)
+    return mDegree += 1
+}
+
+// check increments
+// console.log(minDegrees())
+// console.log(minDegrees())
+
+// transform the second hand 6 degrees every second
+const minutes = () => {
+    minuteHand.style.transform = `rotate(${minDegrees()}deg)`
+}
+
+const minuteTick = setInterval(minutes, 10000)
+
+let hDegree = 0
+const hrDegrees = () => {
+    console.log(hrDegree)
+}
