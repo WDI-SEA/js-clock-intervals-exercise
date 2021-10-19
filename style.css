@@ -13,20 +13,20 @@ display: flex;
 #hour {
     display: flex;
     position: relative;
-    transform: rotate(240deg);
+    transform: rotate(0deg);
 
 }
 
 #minute {
     display: flex;
     position: relative;
-    transform: rotate(180deg);
+    transform: rotate(0deg);
 
 }
 
 #second {
     display: flex;
     position: relative;
-    transform: rotate(18deg);
+    transform: rotate(0deg);
 
 }
