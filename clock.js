@@ -1,6 +1,4 @@
 
-
-
 let secondDegrees = 0
 let minuteDegrees = 0
 let hourDegrees = 0
@@ -12,6 +10,7 @@ const clockFace = document.querySelector('#face')
 const nowButton = document.querySelector('#current-time')
 const beginningButton = document.querySelector('#regular-clock')
 const stopButton = document.querySelector('#stop-clock')
+const currentButton = document.querySelector('#current-time')
 // secondHandCounter = 0
 // minuteHandCounter = 0
 // hourHandCounter = 0
@@ -44,9 +43,13 @@ let hourCounter = 0
 let minuteCounter = 0
 let secondCounter = 0
 
+console.log(`heloo $(hourCounter)`)
+
+
 
 // console.log(hours + minutes + seconds)
 const zeroTime = () => {
+    
     // determine Hours
     let hourInterval = setInterval(() => {
             hourCounter++;
@@ -89,105 +92,63 @@ const zeroTime = () => {
     // determine Seconds
 }
 
-// nowButton.addEventListener('click', nowTime)
-beginningButton.addEventListener('click', zeroTime)
+const nowTime = () => {
+    // Polling now method every second
+    let updater = setInterval(() => {
+        now = new Date()
+        nowSecond = now.getSeconds()
+        nowMinute = now.getMinutes()
+        nowHour = now.getHours()
+        console.log(`Hour: ${nowHour} Minute ${nowMinute} Second ${nowSecond}`)
 
-
-
-
-
-// // regular = new Date(0, 0, 0);
-// // function regularTime(regular.GetHour, regualr.GetMin, regular.GetSec) { ... }
-// //
-// // now = new Date()
-// // function nowTime(now.GetHour, now.GetMin, now.GetSec) { ... }
-
-// /*
-
-// function secFrameRate = setInterval(() => {
-//     secondDegrees = secondDegrees + secDegreePerSecond
-//     secondHand.style.transform = rotate(secondedegres)
-// }
-
-// function minFrameRate = setInterval() = {
-//     secondDegrees = secondDegrees + secDegreePerSecond
-//     minutesHand.style.transform = rotate(secondedegres)
-// }
-
-// function hoursFrameRate = setInterval() = {
-//     secondDegrees = secondDegrees + secDegreePerSecond
-//     hoursHand.style.transform = rotate(secondedegres)
-// }
+        }, 1000)
     
-// */
-// const regularTime = () => {
+    // determine Hours
+    // every 12 minutes, update hourAngle
+    let hourInterval = setInterval(() => {
+            console.log(nowHour) 
+            let hourCounterToAngle = ((nowHour/24) % 12) * 360 // 330
+            console.log(hourCounterToAngle)
+            let hourAngle = (hourCounterToAngle + .1) % 360;
+            console.log(hourAngle)
+            hourHand.style.transform = "rotate(" + hourAngle + "deg)";
+        }, 1000)
+    // determine Minutes
+    let minuteInterval = setInterval(() => {
+            console.log(nowMinute)
+            let minuteCountertoAngle = (nowMinute/60) * 360
+            let minuteAngle = minuteCountertoAngle + 6 % 360;
+            minuteHand.style.transform ="rotate(" + minuteAngle + "deg)";
+        }, 1000)
 
-// /*
-//     setInterval(() => {
-
-//     }
-// */
-
-//     setInterval(()=> {
-//         secondDegrees = secondDegrees+6;
-//         secondHandCounter++;
-//         secondHandCounter = secondHandCounter % 60
-//         console.log(secondHandCounter)
-//         secondHand.style.transform = "rotate(" + secondDegrees+ "deg)";
+    let secondInterval = setInterval(() => {
+            console.log(nowSecond)
+            let secondCountertoAngle = (nowSecond/60) * 360
+            let secondAngle = (secondCountertoAngle + 6) % 360
+            secondHand.style.transform = "rotate(" + secondAngle + "deg)";
+        }, 1000)
     
-
-//     }, 1000)
-
-//     setInterval(() => {
-//         minuteDegrees = minuteDegrees+6;
-//         minuteHandCounter++;
-//         minuteHandCounter = minuteHandCounter % 60
-//         console.log(minuteHandCounter)
-//         minuteHand.style.transform = "rotate(" + minuteDegrees+ "deg)";
-//     }, 60000)
-
-//     setInterval(() => {
-//         setInterval(()=> {
-//         hourDegrees = hourDegrees+6
-//         },12000)
-//         hourHandCounter++;
-//         hourHandCounter = hourHandCounter % 12
-//         console.log(hourHandCounter)
-//         hourHand.style.transform = "rotate(" + minuteDegrees+ "deg)";
-//     }, 3600000)
-// }
-
-
-// const nowTime = () => {
-
-//     setInterval(()=> { // Minute Hand
-//         secondHandCounter++;
-//         nowSDegree = nowSDegree+6;
-//         secondHandCounter = secondHandCounter % 60
-//         console.log(secondHandCounter)
-//         secondHand.style.transform = "rotate(" + nowSDegree+ "deg)";
-//      }, 1000)
+    const stopClock = () => {
+        clearInterval(hourInterval)
+        clearInterval(secondInterval)
+        clearInterval(minuteInterval)
+        console.log(hourCounter + minuteCounter + secondCounter)
+    }
     
-//     setInterval(() => {
-//         nowMDegree = nowMDegree+6;
-//         minuteHandCounter++;
-//         minuteHandCounter = minuteHandCounter % 60
-//         console.log(minuteHandCounter)
-//         minuteHand.style.transform = "rotate(" + nowMDegree + "deg)";
-//     }, 60000)
+        stopButton.addEventListener('click', stopClock)
+    // determine Seconds
+}
+
+
+// If internals are in the global scope
+// then you can refer to them inside this handler
+beginningButton.addEventListener('click', function() {
+    // start them for the first time or... again
+    zeroTime(nowHour, nowMinute, nowSecond);
     
-//     setInterval(() => {
-//         setInterval(()=> {
-//         nowHDegree= nowHDegree+6
-//         },12000)
-//         hourHandCounter = hourHandCounter % 12
-//         hourHandCounter++;
-//         console.log(hourHandCounter)
-//         hourHand.style.transform = "rotate(" + nowHDegree + "deg)";
-//     }, 3600000)
+})
 
 
-// }
-
-// nowButton.addEventListener('click', nowTime)
-beginningButton.addEventListener('click', zeroTime)
+currentButton.addEventListener('click', function() {
+    nowTime(nowHour, nowMinute, nowSecond)
+})
