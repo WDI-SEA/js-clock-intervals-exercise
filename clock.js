@@ -1,6 +1,10 @@
+// Variables for the images to style/rotate via JS
 const second = document.getElementById("second");
 const minute = document.getElementById("minute");
 const hour = document.getElementById("hour");
+
+// 3 functions, one for each arm.  Each one has a ticker (setTimeout) that ticks for 1 second and updates the function in each recursion. These recursions grab the current hour, minute, and second and pass that number to the style.rotate dom change to move the hands.  
+
 
 // Setting recursive function for rotation seconds by grabbing current time and transforming the second hand to the correct degree
 // uses Date + get... to pull in current time.  Uses those times to calculate the degree to transform the hands into the right position.
