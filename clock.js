@@ -13,7 +13,6 @@ const seconds =() => {
     secDeg=sec*6
     sec++
     secondHand.style.transform = 'rotate(' + secDeg + 'deg)'
-    console.log('tick')
 }
 
 let  secTime= setInterval(seconds, 1000)
@@ -24,7 +23,6 @@ const minutes=()=>{
     minDeg=min*6
     min++
     minuteHand.style.transform = 'rotate(' + minDeg + 'deg)'
-    console.log('tock')
 }
 
 let  minTime= setInterval(minutes, 60000)
