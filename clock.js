@@ -1,13 +1,13 @@
-let degreesSeconds = secondRotation()
-let degreesHours = hourRotation()
-let degreesMinutes = minuteRotation()
+// let degreesSeconds = secondRotation()
+// let degreesHours = hourRotation()
+// let degreesMinutes = minuteRotation()
 
 let hourHand = document.getElementById('hour')
 let minuteHand = document.getElementById('minute')
 let secondHand = document.getElementById('second')
 
-
-
+let seconds = 0
+     
 
 let secondRotation = (seconds) => {
     return (seconds /60) * 360
@@ -25,3 +25,16 @@ let minuteRotation = (minutes) => {
 //console.log("minute marker is on", minuteRotation(30)) // testing minuteRoation function
 // console.log("the hour degrees should be", hourRotation(8)) // testing hourRotation function
 // console.log("the second degrees should be", secondRotation(3)) // testing secondRotation function
+
+
+// write function that will start counting up in seconds once page is loaded 
+
+const countup = () => {
+    seconds += 1;
+    return seconds
+    }
+
+setInterval(countup, 1000)
+
+
+
