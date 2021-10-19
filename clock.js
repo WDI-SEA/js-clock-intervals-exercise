@@ -10,15 +10,7 @@ const clockFace = document.querySelector('#face')
 const beginningButton = document.querySelector('#regular-clock')
 const stopButton = document.querySelector('#stop-clock')
 const currentButton = document.querySelector('#current-time')
-// secondHandCounter = 0
-// minuteHandCounter = 0
-// hourHandCounter = 0
 
-// let now = new Date();
-// let currentTime = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
-// nowSDegree = (now.getSeconds() / 60 * 360) % 360
-// nowMDegree = (now.getMinutes() / 60 * 360) % 360
-// nowHDegree = (now.getHours() / 12 * 360) % 360
 
 // Initiaizing a 00:00:00 clock
 let initializeTime = new Date(2021, 9, 18, 0,0,0);
