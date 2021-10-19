@@ -1,44 +1,14 @@
-///rotation variables
-let secondDegrees = 45;
-let minuteDegrees = 75;
-let hourDegrees = 180;
 
 //DOM Initializations
 let secondHand = document.getElementById('second');
-secondHand.style.transform = `rotate(${secondDegrees}deg)`
-
 let minuteHand = document.getElementById('minute');
-minuteHand.style.transform = `rotate(${minuteDegrees}deg)`
-
 let hourHand = document.getElementById('hour');
-hourHand.style.transform = `rotate(${hourDegrees}deg)`
 
-//calculate the degrees to be rotated for each time
-const secMinRotation = (time) => {
-    if (time === 0) {
-        return 0
-    }
-    else  {
-        return (time/60) * 360
-    }
-}
-console.log(`secMinRotation(59) = ${secMinRotation(59)}`)
 
-console.log(`secMinRotation(0) = ${secMinRotation(0)}`)
-
-const hourRotation = (time) => {
-    if (time === 0) {
-        return 0
-    } else {
-        return (time / 12) * 100
-    }
-}
-console.log(`hourRotation(5) = ${hourRotation(5)}`)
-console.log(`hourRotation(0) = ${hourRotation(0)}`)
 
 /////how do we know what second it is?
 ///// return 0-59 at a set interval of 1000
-//secondClock = (someFunc, 1000)
+//secondClock = (counter, 1000)
 
 //write a function that increments the seconds
 let secondCount = 0
@@ -54,19 +24,41 @@ let secondCount = 0
         }
     }    
 
+//calculate the degrees to be rotated for each time and move hand 
+const moveSecondHand = (time) => {
+    let degrees 
+    if (time === 0) {
+        degrees = 0
+        secondHand.style.transform = "rotate(" + degrees + "deg)"
+    }
+    else  {
+        degrees = (time/60) * 360
+        secondHand.style.transform = "rotate(" + degrees + "deg)"
+    }
+
+}
+
+
+//write a function that catches the seconds and rotates the hand accordingly 
+const secondConverter = () => {
+    moveSecondHand(seconds())
+}
+
+
 //write a function that runs the needed functions every second
-const secondSetter = ( (someFunc) => {
-    setInterval(someFunc, 1000)
+const secondSetter = ( (fireOnSecond) => {
+    setInterval(fireOnSecond, 2000)
+    console.log("seconds set!")
 })
 
-//invoke the cb and HOF to set the second hand
-secondSetter(seconds)
+//invoke the cb and HOF to move he second hand
+
 
 /////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 ////do the same for minutes////
 
-///second incrementer
+//write a function that increments the seconds
 let minuteCount = 0
  const minutes = () => {
         if (minuteCount === 59) {
@@ -77,28 +69,114 @@ let minuteCount = 0
             console.log(`minuteCount = ${minuteCount}`)
             minuteCount++
             return minuteCount
-        }
     }    
+ }
 
-//function to run the functions every minute
-const minuteSetter = ( (someFunc) => {
-    setInterval(someFunc, 60000)
+//calculate the degrees to be rotated for each time and move hand 
+const moveMinuteHand = (time) => {
+    let degrees 
+    if (time === 0) {
+        degrees = 0
+        minuteHand.style.transform = `rotate(${degrees}deg)`
+    }
+    else  {
+        degrees = (time/60) * 360
+        minuteHand.style.transform = `rotate(${degrees}deg)`
+    }
+
+}
+
+
+//write a function that catches the seconds and rotates the hand accordingly 
+const minuteConverter = () => {
+    moveMinuteHand(minutes())
+}
+
+
+//write a function that runs the needed functions every second
+const minuteSetter = ( (fireOnMinute) => {
+    setInterval(fireOnMinute, 120000)
+    console.log("minutes set!")
 })
 
-//invoke said minute functions
-minuteSetter(minutes)
- 
+//invoke the cb and HOF to move he second hand
+
+
+
 //////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 ////do the same for hours////
+
+//write a function that increments the hours
+let hourCount = 0
+ const hours = () => {
+        if (hourCount === 11) {
+            console.log(`hourCount = ${hourCount}`)
+            hourCount = 0
+            return hourCount
+        } else {
+            console.log(`hourCount = ${hourCount}`)
+            hourCount++
+            return hourCount
+    }    
+ }
+
+//calculate the degrees to be rotated for each time and move hand 
+const moveHourHand = (time) => {
+    let degrees 
+    if (time === 0) {
+        degrees = 0
+        hourHand.style.transform = `rotate(${degrees}deg)`
+    }
+    else  {
+        degrees = (time / 12) * 100
+        hourHand.style.transform = `rotate(${degrees}deg)`
+    }
+
+}
+
+
+//write a function that catches the seconds and rotates the hand accordingly 
+const hourConverter = () => {
+    moveHourHand(hours())
+}
+
+
+//write a function that runs the needed functions every second
+const hourSetter = ( (fireOnHour) => {
+    setInterval(fireOnHour, 7200000)
+    console.log("hours set!")
+})
 
 
 //minuteClock = (someFun, 60000)
     //minutes?
     // return 0-59 at a set interval of 60000
 
-//hourClock = (someFunc, 360000)
+//hourClock = (counter, 360000)
     //hours? 
     //return 0-11 at a set interval of 3600000
+
+
+////////Be sure to invoke the functions all at once so 
+////////the timers begin at the same time!
+
+document.addEventListener('DOMContentLoaded', () => {
+    secondSetter(seconds)
+    secondSetter(secondConverter)
+ })
+document.addEventListener('DOMContentLoaded', () => { 
+    minuteSetter(minutes)
+    minuteSetter(minuteConverter)
+})
+document.addEventListener('DOMContentLoaded', () => {
+    hourSetter(hours)
+    hourSetter(hourConverter)
+ })
+
+
+
+
+
 
 
