@@ -35,37 +35,31 @@ img {
 }
 
 #clock {
-  position: relative;
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
 }
 
-#clock img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.face {
+  position: relative;
 }
 
 #hour {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
 #minute {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  z-index: 11;
 }
 
 #second {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  /* transform: translate(-50%, -50%); */
+  z-index: 12;
 }
