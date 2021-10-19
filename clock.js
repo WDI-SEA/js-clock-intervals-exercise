@@ -6,46 +6,56 @@
 
 //Grabbing the DOM in the beginning
 
-// let secHand = 0;
 // let minHand = 0;
 // let hrHand = 0;
 
-const hourRotation = (arg) => {
-  return (arg / 12) * 360;
+const hourRotation = (conv) => {
+  return (conv / 12) * 360;
 };
 
-const minuteRotation = (arg) => {
-  return (arg / 60) * 360;
+const minuteRotation = (conv) => {
+  return (conv / 60) * 360;
 };
 
-const secondRotation = (arg) => {
-  return (arg / 60) * 360;
+// let secHand = 0;
+const secondRotation = (conv) => {
+  return (conv / 60) * 360;
 };
 
-const date = new Date();
-let sec = document.getElementById("second");
-const se = date.getSeconds();
-const degree = secondRotation(se);
-sec.style.transform = "rotate(" + degree + "deg)";
+function second() {
+  const date = new Date();
+  const se = date.getSeconds();
+  const degree = secondRotation(se);
+  let sec = document.getElementById("second");
+  sec.style.transform = "rotate(" + degree + "deg)";
+  degree++;
+  setInterval(second, 1000);
+}
 
-let min = document.getElementById("minute");
-const mi = date.getMinutes();
-const minHand = minuteRotation(mi);
-min.style.transform = "rotate(" + minHand + "deg)";
+setInterval(second, 1000);
 
-let hr = document.getElementById("hour");
-const hour = date.getHours();
-const hrHand = hourRotation(hour);
-hr.style.transform = "rotate(" + hrHand + "deg)";
+function minute() {
+  const dateM = new Date();
+  const mi = dateM.getMinutes();
+  const minHand = minuteRotation(mi);
+  let min = document.getElementById("minute");
+  min.style.transform = "rotate(" + minHand + "deg)";
+  minHand++;
+  setInterval(minute, 1500);
+}
 
-// function second() {
-//   if (secHand >= 60) {
-//     console.log(secHand);
-//     i++;
-//     setInterval(second, 1000);
-//   }
-// }
+setInterval(minute, 1500);
 
-setInterval(sec, 1000)
-setInterval(min, 1000)
-setInterval(hr, 1000)
+function hourMove() {
+  const dateH = new Date();
+  const hour = dateH.getHours();
+  const hrHand = hourRotation(hour);
+  let hr = document.getElementById("hour");
+  hr.style.transform = "rotate(" + hrHand + "deg)";
+  hrHand++;
+  setInterval(hourMove, 2000);
+}
+
+setInterval(hourMove, 2000);
+// setInterval(min, 1000)
+// setInterval(hr, 1000)
