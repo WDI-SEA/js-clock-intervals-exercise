@@ -93,7 +93,7 @@ const zeroTime = () => {
 
 const nowTime = () => {
     // Refactor
-    let updater = setInterval(() => {
+    setInterval(() => {
         let now = new Date()
         let nowSecond = now.getSeconds()
         let nowMinute = now.getMinutes()
@@ -102,12 +102,13 @@ const nowTime = () => {
         let minuteDeg = 6
         let secondDeg = 6
         // console.log(`Hour: ${nowHour} Minute ${nowMinute} Second ${nowSecond}`)
-        let hourAngle = ((nowHour * hourDeg) + nowMinute)/2 // if hour is 1 and minute is 20 1*30+20/2 = 40deg
+        let hourAngle = (nowHour * hourDeg + nowMinute) % 360// if hour is 1 and minute is 20 1*30+20/2 = 40deg
         let minuteAngle = nowMinute * minuteDeg
         let secondAngle = nowSecond * secondDeg
         hourHand.style.transform = "rotate(" + hourAngle + "deg)";
         minuteHand.style.transform ="rotate(" + minuteAngle + "deg)";
         secondHand.style.transform = "rotate(" + secondAngle + "deg)";
+        console.log(`${hourAngle} ${minuteAngle} ${secondAngle}`)
         }, 1000)
 
     const stopClock = () => {
