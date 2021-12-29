@@ -1,7 +1,8 @@
 #clock {
     display: flex;
-   
-    position: relative
+   justify-content: center;
+    position: relative;
+  
 
 }
 
@@ -9,22 +10,22 @@
     display: flex;
     flex-wrap: wrap;
 position: absolute
-z-index: 1;
+
 }
 
 #hour {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
 }
 
 #minute {
     position: absolute;
-    z-index: 3;
+    z-index: 2;
 }
 
 #second {
     position: absolute;
-    z-index: 4;
+    z-index: 3;
 }
 
 #myElement {
