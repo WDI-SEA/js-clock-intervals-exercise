@@ -4,9 +4,9 @@ let mins = 0
 let hours = 0
 
 /* DOM Selectors */
-const secondHand = document.getElementById("second");
-const minuteHand = document.getElementById("minute");
-const hourHand = document.getElementById("hour");
+const secondHand = document.getElementById("second")
+const minuteHand = document.getElementById("minute")
+const hourHand = document.getElementById("hour")
 
 /* Functions */
 // convert stepped increment to degrees 
