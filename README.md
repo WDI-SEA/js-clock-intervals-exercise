@@ -16,8 +16,8 @@ Use CSS transform rotation to rotate the hands of the
 clock.
 
 ```css
-#myElement {
-  transform: rotate(45deg);
+.rotate {
+  transform: rotate(45deg)
 }
 ```
 
@@ -28,8 +28,8 @@ their CSS properties:
 ```js
 let degrees = 45;
 
-let el = document.getElementById("myElement");
-el.style.transform = "rotate(" + degrees + "deg)";
+const el = document.getElementById("myElement")
+el.style.transform = "rotate(" + degrees + "deg)"
 ```
 
 It would be useful to define functions that convert
@@ -37,19 +37,20 @@ seconds, minutes and hours to how many degrees the
 hand should be rotated around the clock!
 
 ```js
-secondRotation(0); // returns 0
-secondRotation(59); // returns (59 / 60) * 360
+secondRotation(0) // returns 0
+secondRotation(59) // returns (59 / 60) * 360
 
-hourRotation(12); // returns 0
-hourRotation(5); // returns (5 / 12) * 360
+hourRotation(12) // returns 0
+hourRotation(5) // returns (5 / 12) * 360
 ```
 
 ## Bonus: Show Actual Time
+
 Use JavaScripts `Date` objects to display the actual
 time.
 
 ```js
-let now = new Date();
+const now = new Date()
 ```
 
 Get `now` by declaring a new Date object. You can google for "MDN date methods" to see what
@@ -60,6 +61,7 @@ See the full list of methods in the left sidebar on this site:
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
 
 ## Licensing
+
 All content is licensed under a CC­BY­NC­SA 4.0 license.
 All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
 
