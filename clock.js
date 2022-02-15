@@ -15,8 +15,8 @@
 
 
     let rotateHour = () =>{
-    const hourHand = document.getElementById("hour");
-    hourHand.style.transform = 'rotate(30deg)';
+        let hourHand = document.getElementById("hour");
+        hourHand.style.transform = 'rotate(30deg)';
     // hourHand.rotate(30);
     }
 
@@ -24,7 +24,7 @@
 
 
     let rotateMinute = () =>{
-        const minuteHand = document.getElementById("minute");
+        let minuteHand = document.getElementById("minute");
         minuteHand.style.transform = 'rotate(6deg)';
         // minuteHand.rotate(6);
         
@@ -33,7 +33,7 @@
 
 
     let rotateSecond = () =>{
-        const secondHand = document.getElementById("second");
+        let secondHand = document.getElementById("second");
         secondHand.style.transform = 'rotate(6deg)';
         // secondHand.rotate(6);
     }
