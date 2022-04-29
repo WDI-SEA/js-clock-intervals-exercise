@@ -33,7 +33,7 @@ const clockRun = () => {
 
 // solve using Date()
 const clockRunReal = () => {
-  const now = new Date
+  const now = new Date()
 
   const secDegrees = toDegrees(now.getSeconds(), 60)
   secondHand.style.transform = `rotate(${secDegrees}deg)`
