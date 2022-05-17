@@ -1,14 +1,29 @@
 #clock {
+   
 }
 
 #clock img {
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 550px;
+    filter: invert(100%);
+    
 }
 
 #hour {
+
+
 }
 
 #minute {
+
 }
 
 #second {
 }
+
+body {
+    background-color: #23B9B0;
+}
+
+
