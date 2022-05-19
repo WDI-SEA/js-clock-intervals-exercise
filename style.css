@@ -17,11 +17,11 @@ body {
   }
   #minute {
     position: absolute;
-    transform: rotate(20deg);
+    transform: rotate(10deg);
   }
   #second {
     position: absolute;
-    transform: rotate(45deg);
+    transform: rotate(0deg);
   }
 
     
