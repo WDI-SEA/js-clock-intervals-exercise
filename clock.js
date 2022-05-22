@@ -6,38 +6,23 @@ const minuteHand = document.getElementById('minute');
 //for hour hand
 const hourHand = document.getElementById('hour');
 
-//moving the clock
-let seconds = 0;
-let minutes = 0;
-let hours = 0;
+
 
 const runClock = () => {
     console.log();
+    const date = new Date()
+    console.log(date)
+    
+    let seconds = date.getSeconds();
+    let minutes = date.getMinutes();
+    let hours   = date.getHours();
 
-    const secondsRotation= () => {let secondcounters = setInterval(() => {
-        let degrees = (seconds / 60) * 360;
-        secondHand.style.transform = "rotate(" + degrees + "deg)"
-        seconds++;
-    }, 1000);
-    }
+    let secondsHandRotation = seconds / 60;
+    let minutesHandRotation = minutes / 60;
+    let hourHandRotation = (minutesHandRotation + hours) / 12;
 
-    const minutesRotation= () => {let secondcounters = setInterval(() => {
-    let degrees = (seconds / 60) * 360;
-    secondHand.style.transform = "rotate(" + degrees + "deg)"
-    seconds++;
-}, 60000);
+    secondHand.style.transform = "rotate(" + secondsHandRotation * 360 + "deg)"
+    minuteHand.style.transform = "rotate(" + minutesHandRotation * 360 + "deg)"
+    hourHand.style.transform = "rotate(" + hourHandRotation * 360 + "deg)"
 }
-
-const hourRotation= () => {let secondcounters = setInterval(() => {
-    let degrees = (seconds / 60) * 360;
-    secondHand.style.transform = "rotate(" + degrees + "deg)"
-    seconds++;
-}, 1000);
-}
-
-secondsRotation();
-minutesRotation();
-hourRotation();
-}
-
-runClock();
+setInterval(runClock, 1000);
