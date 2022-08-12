@@ -7,16 +7,13 @@
 }
 
 #hour {
-  position: absolute;
   z-index: 1;
 }
 
 #minute {
-  position: absolute;
   z-index: 10;
 }
 
 #second {
-  position: absolute;
   z-index: 100;
 }
