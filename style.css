@@ -1,14 +1,30 @@
+body {
+    background-color: black;
+    padding: 0 40vw;
+    
+}
+
 #clock {
+    text-align: center;
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
+    z-index: 2;
 }
 
 #minute {
+    z-index: 1
 }
 
 #second {
+}
+
+.date {
+    font-family: Helvetica, sans-serif;
+    color: white;
+    margin-bottom: -10px;
 }
