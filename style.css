@@ -1,11 +1,10 @@
 #clock {
-    position: relative;
+    
 }
 
 #clock img {
     position: absolute;
-    justify-items: center;
-    margin: 0;
+    
 }
 
 #hour {
