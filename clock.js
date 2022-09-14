@@ -2,7 +2,14 @@ const secondHand = document.getElementById('second')
 const minuteHand = document.getElementById('minute')
 const hourHand = document.getElementById('hour')
 
-
+// const now = new Date()
+// console.log(now.getHours())
+// const nowHourDegrees = (now.getHours() - 12)*30
+// console.log(nowHourDegrees)
+// const nowMinuteDegress = (now.getMinutes())*6
+// console.log(nowMinuteDegress)
+// const nowSecondDegrees = (now.getSeconds())*5
+// console.log(nowSecondDegrees)
 
 
 let degreeHour = 0
@@ -25,7 +32,7 @@ const minuteRotation = () => {
     }
     minuteHand.style.transform = "rotate(" + degreesMinute + "deg)"
 }
-setInterval(minuteRotation, 60 * 1000)
+setInterval(minuteRotation, 60000)
 
 let degreesSecond = 0
 const secondRotation = () => {
@@ -38,9 +45,6 @@ const secondRotation = () => {
 }
 setInterval(secondRotation,1000)
 
-
-
-const now = new Date()
 
 
 
