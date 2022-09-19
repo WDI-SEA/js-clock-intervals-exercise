@@ -3,25 +3,12 @@
     
 }
 
-#clock img {
+#face{
     position: absolute;
 }
 
-#hour {
-    z-index: 1;
-    transform: rotate(45deg)
-}
-
+#second,
+#hour,
 #minute {
-    position: absolute;
-    transform: rotate(45deg)
+    position:absolute;
 }
-
-#second {
-    position: absolute;
-    transform: rotate(45deg)
-}
-
-/* .rotate {
-    transform: rotate(45deg)
-  } */
