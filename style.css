@@ -19,3 +19,7 @@ position:relative
 #second {
 position: relative;
 }
+
+.rotate {
+    transform: rotate(0deg)
+  }
