@@ -1,14 +1,43 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box ;
+}
+/* container */
 #clock {
+position: absolute;
+justify-content: center;
 }
 
-#clock img {
+/* #clock img {
+} */
+
+/* clock */
+.face{
+    position: absolute;
+
 }
 
 #hour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 #minute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 #second {
+position: absolute;
+top: 0;
+left: 0;
+z-index: 3;
 }
+
+.rotate {
+    transform: rotate(45deg)
+  }
