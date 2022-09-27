@@ -1,14 +1,23 @@
+
+
 #clock {
+    
 }
 
 #clock img {
+    position: absolute;
 }
 
 #hour {
-}
+    position: absolute;
+      }
 
 #minute {
+    position: absolute;
 }
 
 #second {
+    position: absolute;
 }
+
+/* bring to the front  */
