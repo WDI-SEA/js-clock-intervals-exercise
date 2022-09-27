@@ -1,14 +1,32 @@
 #clock {
+    position: absolute;
+    top: 0px;
 }
 
 #clock img {
+    position: absolute;
+    top: 0px;
 }
 
 #hour {
+    position: absolute;
+    top: 0px;
 }
 
 #minute {
+    position: absolute;
+    top: 0px;
 }
 
 #second {
+    position: absolute;
+    top: 0px;
+    /* transform: rotate(19.5deg) */
 }
+
+
+.rotate {
+    transform: rotate(6.5deg)
+  }
+
+/* 6.5 for every tick  */
