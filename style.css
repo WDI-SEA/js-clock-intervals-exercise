@@ -21,12 +21,9 @@
 #second {
     position: absolute;
     top: 0px;
-    /* transform: rotate(19.5deg) */
 }
 
 
 .rotate {
-    transform: rotate(6.5deg)
+    transform: rotate(0deg)
   }
-
-/* 6.5 for every tick  */
