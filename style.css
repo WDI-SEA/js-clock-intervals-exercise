@@ -8,20 +8,17 @@
     top: 0px;
 }
 
-#hour {
-    position: absolute;
+/* #hour {
     top: 0px;
 }
 
 #minute {
-    position: absolute;
     top: 0px;
 }
 
 #second {
-    position: absolute;
     top: 0px;
-}
+} */
 
 
 .rotate {
