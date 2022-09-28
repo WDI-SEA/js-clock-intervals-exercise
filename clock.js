@@ -29,7 +29,7 @@ const minutesRotation = () => {
     minutesDegree = (minutesCount/60)*360
     minute.style.transform = "rotate(" + minutesDegree + "deg)"
 
-    //Change hour if it reaches 60 seconds
+    //Change hour if it reaches 60 minutes
     if(minutesCount%60 === 0){
         setTimeout(hourRotation, timeSpeed)
     }
