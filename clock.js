@@ -10,6 +10,7 @@ let secondsCount = 0, minutesCount = 0, hoursCount = 0, secondsDegree, minutesDe
 
 //Rotate the seconds
 const secondRotation = () => {
+    secondsCount = secondsCount%60
     secondsDegree = (secondsCount/60)*360
     second.style.transform = "rotate(" + secondsDegree + "deg)"
 
@@ -24,6 +25,7 @@ const secondRotation = () => {
 
 //Rotate the minutes
 const minutesRotation = () => {
+    minutesCount = minutesCount%60
     minutesDegree = (minutesCount/60)*360
     minute.style.transform = "rotate(" + minutesDegree + "deg)"
 
@@ -37,6 +39,7 @@ const minutesRotation = () => {
 
 //Rotate the hours
 const hourRotation = () => {
+    hoursCount = hoursCount%60
     hoursDegree = (hoursCount/12)*360
     hour.style.transform = "rotate(" + hoursDegree + "deg)"
     hoursCount++
