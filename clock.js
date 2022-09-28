@@ -2,8 +2,6 @@ let Minute = document.querySelector('#minute');
 let Second = document.querySelector('#second');
 let Hour = document.querySelector('#hour');
 
-let degrees = 45;
-
 
 const TimeClc = () => {
 
@@ -22,9 +20,9 @@ let hourRot = () => {
 
 }
 
-minRot.style.transform = "rotate(minRot)"
-secondRot.style.transform = "rotate(secondRot)"
-hourRot.style.transform = "rotate(hourRot)"
+Minute.style.transform = `rotate(${minRot}deg)`
+Second.style.transform = `rotate(${secondRot}deg)`
+Hour.style.transform = `rotate(${hourRot}deg)`
 
 }
 
