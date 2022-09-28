@@ -9,13 +9,11 @@ z-index: -1
     z-index: 0;
  position: absolute;
   right:65%;
-    transform: rotate(90deg);
     top:1%
     }
 
 #minute {
     z-index: 0;
- transform: rotate(1deg);
  position: absolute;
  right:67%;
 }
