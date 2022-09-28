@@ -1,14 +1,29 @@
 #clock {
 }
 
-#clock img {
+#face{
+z-index: -1
 }
 
 #hour {
-}
+    z-index: 0;
+ position: absolute;
+  right:65%;
+    transform: rotate(90deg);
+    top:1%
+    }
 
 #minute {
+    z-index: 0;
+ transform: rotate(1deg);
+ position: absolute;
+ right:67%;
 }
 
-#second {
+#second 
+{
+    position: absolute;
+    right:67%;
+    z-index:1;
+
 }
