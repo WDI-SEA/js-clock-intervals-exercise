@@ -1,29 +1,44 @@
-let Minute = document.querySelector('#minute');
-let Second = document.querySelector('#second');
-let Hour = document.querySelector('#hour');
+// put hands together (css)
+// order the imgs (css/HTML)
 
 
-const TimeClc = () => {
+//DONE
+// write a function that calc the degree of rotation for each hand (time intervals)
+// and use the DOM style in javascript to rotate hands 
 
-let secondRot = () => { 
-    return (Second / 60 *360)
+// Grab the elements
+const secondHand = document.getElementById("second")
+const minuteHand = document.getElementById("minute")
+const hourHand = document.getElementById("hour")
 
-}
 
-let minRot = () => { 
-    return (Minute / 60 *360)
+// initialize variables
 
-}
 
-let hourRot = () => { 
-    return (Hour / 60 *360)
 
-}
+// one function for initial position 
 
-Minute.style.transform = `rotate(${minRot}deg)`
-Second.style.transform = `rotate(${secondRot}deg)`
-Hour.style.transform = `rotate(${hourRot}deg)`
 
-}
 
-setInterval(TimeClc , 1000)
+// running setInterval
+function clockWorker() { 
+    // calc rotation intervals 
+    // apply rotation styles
+    let currentTime = new Date()
+        let secondAngle = currentTime.getSeconds() * 6 
+        secondHand.style.transform = `rotate(${secondAngle}deg)`
+
+        let minuteAngle = currentTime.getMinutes() * 6
+        minuteHand.style.transform = `rotate(${minuteAngle}deg)` 
+
+        let hourrsAngle = currentTime.getHours() * 30
+        hourHand.style.transform = `rotate(${hourrsAngle}deg)` 
+    }
+
+    
+    setInterval(() => {
+        clockWorker()
+    }, 1000)
+
+
+
