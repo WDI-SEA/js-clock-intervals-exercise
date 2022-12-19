@@ -53,7 +53,6 @@ const minutes = setInterval(rotateMinuteHand, 60000)
 
 const hours = setInterval(rotateHourHand, 3.6e+6)
 
-
 // document.addEventListener('DOMContentLoaded', getCurrentTime)
 
 
