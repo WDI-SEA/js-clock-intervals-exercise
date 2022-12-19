@@ -38,7 +38,6 @@ const rotateMinuteHand = () => {
     let minutes = getCurrentTime()[1]
     let degrees = minuteRotation(minutes)
     minuteHand.style.transform = `rotate(${degrees}deg)`
-    console.log(minutes)
 }
 
 const rotateHourHand = () => {
